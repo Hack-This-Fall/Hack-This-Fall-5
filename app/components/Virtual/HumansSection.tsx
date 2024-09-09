@@ -11,44 +11,44 @@ import DropShadowBox from './DropShadowBox';
 
 const HumanDetails = [
   {
-    name: 'First Last',
-    image: '/images/humans/demo.png',
+    name: 'Aditya',
+    image: '/images/humans/aditya.png',
   },
   {
-    name: 'First Last',
-    image: '/images/humans/demo.png',
+    name: 'Ashwin',
+    image: '/images/humans/ashwin.png',
   },
   {
-    name: 'First Last',
-    image: '/images/humans/demo.png',
+    name: 'Diana',
+    image: '/images/humans/diana.png',
   },
   {
-    name: 'First Last',
-    image: '/images/humans/demo.png',
+    name: 'Dmitry',
+    image: '/images/humans/dmitry.png',
   },
   {
-    name: 'First Last',
-    image: '/images/humans/demo.png',
+    name: 'Eddie',
+    image: '/images/humans/eddie.png',
   },
   {
-    name: 'First Last',
-    image: '/images/humans/demo.png',
+    name: 'Karl',
+    image: '/images/humans/karl.png',
   },
   {
-    name: 'First Last',
-    image: '/images/humans/demo.png',
+    name: 'Khushboo',
+    image: '/images/humans/khushboo.png',
   },
   {
-    name: 'First Last',
-    image: '/images/humans/demo.png',
+    name: 'Santosh',
+    image: '/images/humans/santosh.png',
   },
   {
-    name: 'First Last',
-    image: '/images/humans/demo.png',
+    name: 'Shivay',
+    image: '/images/humans/shivay.png',
   },
   {
-    name: 'First Last',
-    image: '/images/humans/demo.png',
+    name: 'Yashovardhan',
+    image: '/images/humans/yashovardhan.png',
   },
 ];
 

@@ -93,59 +93,60 @@ const Header = ({
         position="relative"
       >
         <Flex
-          as={'a'}
-          id="mlh-trust-badge"
-          display={{ base: 'block', md: 'none' }}
-          maxW="100px"
-          minW="60px"
-          pos="fixed"
-          right="50px"
-          top="0"
-          w="10%"
-          zIndex="10000"
-          href="https://mlh.io/apac?utm_source=apac-hackathon&utm_medium=TrustBadge&utm_campaign=2025-season&utm_content=black"
-          target="_blank"
-        >
-          <Image
-            src="https://s3.amazonaws.com/logged-assets/trust-badge/2025/mlh-trust-badge-2025-black.svg"
-            alt="Major League Hacking 2025 Hackathon Season"
-            w="full"
-          ></Image>
-        </Flex>
-        <Flex
           fontSize="1.2rem"
           fontFamily="--var(--font-roboto-condensed)"
-          pr="2rem"
+          pr="1rem"
           borderRight={isMd ? '2px solid #282826' : 'none'}
           py="0.3rem"
           fontWeight="600"
         >
           HACK THIS FALL
         </Flex>
-        <Flex hideBelow="md" gap="1rem" py="0.3rem" fontWeight="600">
-          {Tabs.map(({ title }, index) => (
+        {isMd && (
+          <Flex gap="1rem" py="0.3rem" fontWeight="600">
+            {Tabs.map(({ title }, index) => (
+              <Flex
+                color={currentSection === title ? '#282826' : '#00000066'}
+                key={index}
+                fontSize="1rem"
+                fontFamily="--var(--font-roboto-condensed)"
+                cursor="pointer"
+                _hover={{
+                  color: '#282826',
+                }}
+                onClick={() => {
+                  setCurrentSection(title);
+                  document.querySelector(`#${title}`)!.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'center',
+                    inline: 'nearest',
+                  });
+                }}
+              >
+                {title}
+              </Flex>
+            ))}
             <Flex
-              color={currentSection === title ? '#282826' : '#00000066'}
-              key={index}
-              fontSize="1rem"
-              fontFamily="--var(--font-roboto-condensed)"
-              cursor="pointer"
-              _hover={{
-                color: '#282826',
-              }}
-              onClick={() => {
-                setCurrentSection(title);
-                document.querySelector(`#${title}`)!.scrollIntoView({
-                  behavior: 'smooth',
-                  block: 'center',
-                  inline: 'nearest',
-                });
-              }}
+              as={'a'}
+              id="mlh-trust-badge"
+              maxW="100px"
+              minW="60px"
+              pos="relative"
+              mr="-0.5rem"
+              w="10%"
+              zIndex="10000"
+              href="https://mlh.io/apac?utm_source=apac-hackathon&utm_medium=TrustBadge&utm_campaign=2025-season&utm_content=black"
+              target="_blank"
             >
-              {title}
+              <Image
+                pos={'absolute'}
+                src="https://s3.amazonaws.com/logged-assets/trust-badge/2025/mlh-trust-badge-2025-black.svg"
+                alt="Major League Hacking 2025 Hackathon Season"
+                w="full"
+              ></Image>
             </Flex>
-          ))}
-        </Flex>
+          </Flex>
+        )}
         {!isMd && (
           <Flex
             fontSize="1.2rem"

@@ -140,7 +140,7 @@ const HeroSection = () => {
           </Button>
           <Button
             as={Link}
-            href="https://bit.ly/htf5-pre"
+            href="https://hackthisfall-virtual.devfolio.co/"
             target="_blank"
             color="#fff"
             fontFamily="var(--font-roboto-condensed)"
@@ -155,7 +155,7 @@ const HeroSection = () => {
             boxShadow="2.95px 2.95px 0px 0px #000000"
             _hover={{ bg: '#746BEB', boxShadow: 'none' }}
           >
-            Pre-Register Now <ArrowForwardIcon ml="0.5rem" />
+            Register Now <ArrowForwardIcon ml="0.5rem" />
           </Button>
         </Flex>
       </Flex>
