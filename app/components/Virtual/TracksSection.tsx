@@ -6,11 +6,11 @@ import DropShadowBox from './DropShadowBox';
 const TracksDetails = [
   {
     name: 'Generative AI & Machine Learning',
-    image: '/images/tracks/iot.svg',
+    image: '/images/tracks/genai.svg',
   },
   {
     name: 'Blockchain & Web3',
-    image: '/images/tracks/iot.svg',
+    image: '/images/tracks/web3.svg',
   },
   {
     name: 'IoT & Embedded Systems',
@@ -18,15 +18,15 @@ const TracksDetails = [
   },
   {
     name: 'Augmented/Virtual Reality',
-    image: '/images/tracks/iot.svg',
+    image: '/images/tracks/ar.svg',
   },
   {
     name: 'Cloud & DevOps',
-    image: '/images/tracks/iot.svg',
+    image: '/images/tracks/cloud.svg',
   },
   {
     name: 'Open Track: Innovate for Good',
-    image: '/images/tracks/iot.svg',
+    image: '/images/tracks/open.svg',
   },
 ];
 
@@ -81,9 +81,17 @@ const TracksSection = () => {
               flexDir="column"
               alignItems="center"
               justifyContent="center"
+              gap="1rem"
             >
-              {/* <Image src={image} alt={name} w="50%" h="50%" /> */}
-              <Text pt="1rem" px="1rem" color="black" textAlign="center" fontSize="2rem" fontWeight="600">
+              <Image src={image} alt={name} h="40%" />
+              <Text
+                pt="1rem"
+                px="1rem"
+                color="black"
+                textAlign="center"
+                fontSize="1.3rem"
+                fontWeight="600"
+              >
                 {name}
               </Text>
             </Flex>
