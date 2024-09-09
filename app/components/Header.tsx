@@ -103,7 +103,7 @@ const Header = ({
           HACK THIS FALL
         </Flex>
         {isMd && (
-          <Flex gap="1rem" py="0.3rem" fontWeight="600">
+          <Flex gap="1rem" fontWeight="600">
             {Tabs.map(({ title }, index) => (
               <Flex
                 color={currentSection === title ? '#282826' : '#00000066'}
@@ -143,6 +143,7 @@ const Header = ({
                 src="https://s3.amazonaws.com/logged-assets/trust-badge/2025/mlh-trust-badge-2025-black.svg"
                 alt="Major League Hacking 2025 Hackathon Season"
                 w="full"
+                top="-0.6rem"
               ></Image>
             </Flex>
           </Flex>

@@ -155,7 +155,7 @@ const HeroSection = () => {
             boxShadow="2.95px 2.95px 0px 0px #000000"
             _hover={{ bg: '#746BEB', boxShadow: 'none' }}
           >
-            Register Now <ArrowForwardIcon ml="0.5rem" />
+            Apply Now <ArrowForwardIcon ml="0.5rem" />
           </Button>
         </Flex>
       </Flex>

@@ -1,44 +1,27 @@
 import { Flex, Heading, Text } from '@chakra-ui/react';
 const footer = [
   {
-    title: 'HOME',
+    title: 'EXPLORE',
     subLinks: [
       {
-        title: 'ABOUT',
-        link: '/virtual/#about',
+        title: 'APPLY',
+        link: 'https://hackthisfall-virtual.devfolio.co/',
       },
-      {
-        title: 'TRACKS',
-        link: '/virtual/#tracks',
-      },
-      {
-        title: 'PRIZES',
-        link: '/prizes',
-      },
-      {
-        title: 'HUMANS',
-        link: '/virtual/#humans',
-      },
-    ],
-  },
-  {
-    title: 'HOME',
-    subLinks: [
       {
         title: 'ABOUT',
-        link: '/about',
+        link: 'https://hackthisfall.tech/about',
       },
       {
-        title: 'TRACKS',
-        link: '/tracks',
+        title: 'EVENTS',
+        link: 'https://hackthisfall.tech/events',
       },
       {
-        title: 'PRIZES',
-        link: '/prizes',
+        title: 'BLOG',
+        link: 'https://blog.hackthisfall.tech/',
       },
       {
-        title: 'HUMANS',
-        link: '/humans',
+        title: 'COC',
+        link: 'https://hackthisfall.tech/coc',
       },
     ],
   },
@@ -52,6 +35,10 @@ const footer = [
       {
         title: 'INSTAGRAM',
         link: 'https://instagram.com/hackthisfall',
+      },
+      {
+        title: 'LINKEDIN',
+        link: 'https://www.linkedin.com/company/hackthisfall/',
       },
       {
         title: 'DISCORD',
@@ -99,16 +86,17 @@ const Footer = () => {
           fontSize={{ base: '1rem', md: '1.2rem' }}
           color="#808080"
         >
-          Hack This Fall began with a mindset of encouraging new hackers to
-          build unique projects regardless of the tech or field. The only focus
-          was to create something meaningful and enjoy the process{' '}
+          Hack This Fall is one of India&apos;s most thriving hacker
+          communities. Join us to build groundbreaking solutions, inspire
+          problem-solvers, and grow together in a diverse, supportive
+          environment.
         </Text>
       </Flex>
       <Flex
-        justifyContent={{base: "center", md: "flex-end"}}
+        justifyContent={{ base: 'center', md: 'flex-end' }}
         borderX={{ base: '2px solid #282826', md: 'none' }}
         borderBottom={{ base: '2px solid #282826', md: 'none' }}
-        gap="1.5rem"
+        gap="2.5rem"
         w={{ base: '100%', md: '50%', lg: '65%' }}
         p="1.2rem"
       >

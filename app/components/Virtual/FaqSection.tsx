@@ -261,7 +261,6 @@ const FaqSection = () => {
                     display="flex"
                     alignItems="center"
                     justifyContent="space-between"
-                    h="full"
                     _hover={{ background: '#FFF' }}
                   >
                     <Text
