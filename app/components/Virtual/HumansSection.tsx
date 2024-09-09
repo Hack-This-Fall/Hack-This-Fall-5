@@ -13,42 +13,52 @@ const HumanDetails = [
   {
     name: 'Aditya',
     image: '/images/humans/aditya.png',
+    link: 'https://twitter.com/adityaoberai1',
   },
   {
     name: 'Ashwin',
     image: '/images/humans/ashwin.png',
+    link: 'https://twitter.com/ashwinexe',
   },
   {
     name: 'Diana',
     image: '/images/humans/diana.png',
+    link: 'https://x.com/dianasoyster',
   },
   {
     name: 'Dmitry',
     image: '/images/humans/dmitry.png',
+    link: 'https://twitter.com/dimidj',
   },
   {
     name: 'Eddie',
     image: '/images/humans/eddie.png',
+    link: 'https://twitter.com/eddiejaoude',
   },
   {
     name: 'Karl',
     image: '/images/humans/karl.png',
+    link: 'https://twitter.com/KarlLingiah',
   },
   {
     name: 'Khushboo',
     image: '/images/humans/khushboo.png',
+    link: 'https://twitter.com/khushbooverma_',
   },
   {
     name: 'Santosh',
     image: '/images/humans/santosh.png',
+    link: 'https://twitter.com/SantoshYadavDev',
   },
   {
     name: 'Shivay',
     image: '/images/humans/shivay.png',
+    link: 'https://twitter.com/HowDevelop',
   },
   {
     name: 'Yashovardhan',
     image: '/images/humans/yashovardhan.png',
+    link: 'https://twitter.com/yashovardhan',
   },
 ];
 
@@ -83,7 +93,7 @@ const HumansSection = () => {
           fontSize={{ base: '3rem', md: '5rem', '2xl': '6rem' }}
           fontWeight="600"
         >
-          HUMANS
+          PREVIOUS HUMANS
         </Heading>
       </Flex>
       <SimpleGrid
@@ -95,8 +105,8 @@ const HumansSection = () => {
         }}
         gap="1rem"
       >
-        {HumanDetails.map(({ image, name }, index) => (
-          <DropShadowBox key={index} w="full" aspectRatio="0.9">
+        {HumanDetails.map(({ image, name, link }, index) => (
+          <DropShadowBox link={link} key={index} w="full" aspectRatio="0.9" >
             <Image src={image} alt={name} w="full" h="full" objectFit="cover" />
             <Flex
               pos="absolute"

@@ -12,6 +12,7 @@ import {
   SimpleGrid,
   Text,
   Link,
+  Box,
 } from '@chakra-ui/react';
 import DropShadowBox from './DropShadowBox';
 import { AddIcon, MinusIcon } from '@chakra-ui/icons';
@@ -148,7 +149,7 @@ const FaqDetails = [
     ),
   },
   {
-    question: 'Who retains ownership of the projects after the hackathon?',
+    question: 'Who retains ownership of my project?',
     answer: (
       <AccordionPanel
         fontFamily="var(--font-outfit)"
@@ -247,40 +248,41 @@ const FaqSection = () => {
           gap="1rem"
         >
           {FaqDetails.map(({ question, answer }, index) => (
-            <AccordionItem
-              boxShadow="6px 6px 0px 0px #282826"
-              border="2px solid #282826"
-              background="#FFF"
-              borderRadius="1rem"
-              key={index}
-              p="1rem"
-            >
-              {({ isExpanded }) => (
-                <>
-                  <AccordionButton
-                    display="flex"
-                    alignItems="center"
-                    justifyContent="space-between"
-                    _hover={{ background: '#FFF' }}
-                  >
-                    <Text
-                      fontFamily="var(--font-outfit)"
-                      fontWeight="500"
-                      fontSize="1.2rem"
-                      textAlign="left"
+            <Box w="full" h="full" key={index}>
+              <AccordionItem
+                boxShadow="6px 6px 0px 0px #282826"
+                border="2px solid #282826"
+                background="#FFF"
+                borderRadius="1rem"
+                p="1rem"
+              >
+                {({ isExpanded }) => (
+                  <>
+                    <AccordionButton
+                      display="flex"
+                      alignItems="center"
+                      justifyContent="space-between"
+                      _hover={{ background: '#FFF' }}
                     >
-                      {question}
-                    </Text>
-                    {isExpanded ? (
-                      <MinusIcon fontSize="1.2rem" />
-                    ) : (
-                      <AddIcon fontSize="1.2rem" />
-                    )}
-                  </AccordionButton>
-                  {answer}
-                </>
-              )}
-            </AccordionItem>
+                      <Text
+                        fontFamily="var(--font-outfit)"
+                        fontWeight="500"
+                        fontSize="1.2rem"
+                        textAlign="left"
+                      >
+                        {question}
+                      </Text>
+                      {isExpanded ? (
+                        <MinusIcon fontSize="1.2rem" />
+                      ) : (
+                        <AddIcon fontSize="1.2rem" />
+                      )}
+                    </AccordionButton>
+                    {answer}
+                  </>
+                )}
+              </AccordionItem>
+            </Box>
           ))}
         </Accordion>
       </Flex>

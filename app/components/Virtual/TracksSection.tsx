@@ -82,7 +82,7 @@ const TracksSection = () => {
               alignItems="center"
               justifyContent="center"
             >
-              <Image src={image} alt={name} w="50%" h="50%" />
+              {/* <Image src={image} alt={name} w="50%" h="50%" /> */}
               <Text pt="1rem" px="1rem" color="black" textAlign="center" fontSize="2rem" fontWeight="600">
                 {name}
               </Text>

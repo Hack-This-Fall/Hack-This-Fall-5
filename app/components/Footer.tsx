@@ -4,10 +4,6 @@ const footer = [
     title: 'EXPLORE',
     subLinks: [
       {
-        title: 'APPLY',
-        link: 'https://hackthisfall-virtual.devfolio.co/',
-      },
-      {
         title: 'ABOUT',
         link: 'https://hackthisfall.tech/about',
       },
@@ -26,7 +22,7 @@ const footer = [
     ],
   },
   {
-    title: 'SOCIALS',
+    title: 'SOCIAL',
     subLinks: [
       {
         title: 'TWITTER',
@@ -39,10 +35,6 @@ const footer = [
       {
         title: 'LINKEDIN',
         link: 'https://www.linkedin.com/company/hackthisfall/',
-      },
-      {
-        title: 'DISCORD',
-        link: 'https://discord.hackthisfall.tech/',
       },
       {
         title: 'YOUTUBE',
@@ -66,7 +58,7 @@ const Footer = () => {
       <Flex
         flexDir="column"
         alignItems="flex-start"
-        justifyContent="center"
+        justifyContent="flex-start"
         borderX={{ base: '2px solid #282826', md: 'none' }}
         borderRight="2px solid #282826 !important"
         gap="0.8rem"
@@ -98,7 +90,9 @@ const Footer = () => {
         borderBottom={{ base: '2px solid #282826', md: 'none' }}
         gap="2.5rem"
         w={{ base: '100%', md: '50%', lg: '65%' }}
-        p="1.2rem"
+        px="1.2rem"
+        pt="1.2rem"
+        pb="0.6rem"
       >
         {footer.map((item, index) => (
           <Flex
@@ -106,17 +100,18 @@ const Footer = () => {
             flexDir="column"
             alignItems="flex-start"
             justifyContent="center"
-            gap={{ base: '0.8rem', md: '1.4rem' }}
           >
             <Heading
               fontFamily="--var(--font-roboto-condensed)"
               fontWeight="700"
               fontSize={{ base: '1rem', lg: '1.2rem' }}
+              mb={{ base: '0.8rem', md: '1.4rem' }}
             >
               {item.title}
             </Heading>
             {item.subLinks.map((subLink, index) => (
               <Text
+                mb={{ base: '0.6rem', md: '0.5rem' }}
                 as="a"
                 key={index}
                 fontFamily="--var(--font-roboto-condensed)"
