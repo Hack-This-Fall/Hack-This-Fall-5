@@ -18,6 +18,7 @@ const HeroSection = () => {
     <Flex
       background="#F9F5F2"
       w="full"
+      h="100dvh"
       className="container-1200"
       justifyContent="center"
       alignItems="center"
@@ -138,7 +139,11 @@ const HeroSection = () => {
             borderRadius="full"
             border="2px solid #282826"
             boxShadow="2.95px 2.95px 0px 0px #000000"
-            _hover={{ bg: 'transparent', boxShadow: 'none', textDecoration: 'none' }}
+            _hover={{
+              bg: 'transparent',
+              boxShadow: 'none',
+              textDecoration: 'none',
+            }}
           >
             Join Discord
           </Button>
@@ -156,7 +161,11 @@ const HeroSection = () => {
             borderRadius="full"
             border="2px solid #282826"
             boxShadow="2.95px 2.95px 0px 0px #000000"
-            _hover={{ bg: '#746BEB', boxShadow: 'none', textDecoration: 'none' }}
+            _hover={{
+              bg: '#746BEB',
+              boxShadow: 'none',
+              textDecoration: 'none',
+            }}
           >
             Join Virtually <ArrowForwardIcon ml="0.5rem" />
           </Button>
