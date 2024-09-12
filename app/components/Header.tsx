@@ -53,7 +53,7 @@ const NavLink = (props: Props) => {
         setCurrentSection(title);
         document.querySelector(`#${title}`)!.scrollIntoView({
           behavior: 'smooth',
-          block: 'center',
+          block: 'start',
           inline: 'nearest',
         });
         onClose();
@@ -118,7 +118,7 @@ const Header = ({
                   setCurrentSection(title);
                   document.querySelector(`#${title}`)!.scrollIntoView({
                     behavior: 'smooth',
-                    block: 'center',
+                    block: 'start',
                     inline: 'nearest',
                   });
                 }}

@@ -59,8 +59,8 @@ const Footer = () => {
         flexDir="column"
         alignItems="flex-start"
         justifyContent="flex-start"
-        borderX={{ base: '2px solid #282826', md: 'none' }}
-        borderRight="2px solid #282826 !important"
+        borderRight={{ base: 'none', md: '2px solid #282826 !important' }}
+        borderBottom={{ base: '2px solid #282826', md: 'none' }}
         gap="0.8rem"
         w={{ base: '100%', md: '50%', lg: '35%' }}
         p="1.2rem"
@@ -85,10 +85,9 @@ const Footer = () => {
         </Text>
       </Flex>
       <Flex
-        justifyContent={{ base: 'center', md: 'flex-end' }}
-        borderX={{ base: '2px solid #282826', md: 'none' }}
-        borderBottom={{ base: '2px solid #282826', md: 'none' }}
-        gap="2.5rem"
+        justifyContent={{ base: 'flex-start', md: 'flex-end' }}
+        borderY={{ base: '2px solid #282826', md: 'none' }}
+        gap={{ base: '5rem', md: '2.5rem' }}
         w={{ base: '100%', md: '50%', lg: '65%' }}
         px="1.2rem"
         pt="1.2rem"

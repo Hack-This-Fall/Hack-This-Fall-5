@@ -27,7 +27,6 @@ const Page = () => {
         minH="100dvh"
         flexDir="column"
         pt="8rem"
-        gap="7rem"
         pb="8rem"
       >
         <InView

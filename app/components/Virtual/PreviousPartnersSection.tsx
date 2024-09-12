@@ -114,6 +114,7 @@ const PreviousPartnersSection = () => {
       className="container-1200"
       flexDir="column"
       gap="3rem"
+      pt="7rem"
     >
       <Flex
         justifyContent={{ base: 'center', md: 'flex-start' }}

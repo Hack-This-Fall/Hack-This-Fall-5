@@ -215,6 +215,7 @@ const FaqSection = () => {
       className="container-1200"
       flexDir="column"
       gap="3rem"
+      py="7rem"
     >
       <Flex
         justifyContent={{ base: 'center', md: 'flex-start' }}
@@ -246,6 +247,7 @@ const FaqSection = () => {
           display="grid"
           gridTemplateColumns={{ base: '1fr', lg: '1fr 1fr' }}
           gap="1rem"
+          allowToggle
         >
           {FaqDetails.map(({ question, answer }, index) => (
             <Box w="full" h="full" key={index}>
