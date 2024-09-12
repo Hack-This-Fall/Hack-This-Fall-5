@@ -80,7 +80,7 @@ const Header = ({
       flexDir="column"
       position="fixed"
       zIndex="30"
-      w="full"
+      w="100vw"
     >
       <Flex
         w="full"
@@ -95,7 +95,7 @@ const Header = ({
         <Flex
           fontSize="1.2rem"
           fontFamily="--var(--font-roboto-condensed)"
-          pr="1rem"
+          // pr="1rem"
           borderRight={isMd ? '2px solid #282826' : 'none'}
           py="0.3rem"
           fontWeight="600"
@@ -132,7 +132,7 @@ const Header = ({
               maxW="100px"
               minW="60px"
               pos="relative"
-              mr="-0.5rem"
+              // mr="-0.5rem"
               w="10%"
               zIndex="10000"
               href="https://mlh.io/apac?utm_source=apac-hackathon&utm_medium=TrustBadge&utm_campaign=2025-season&utm_content=black"
