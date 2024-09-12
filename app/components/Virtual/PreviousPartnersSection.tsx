@@ -10,7 +10,7 @@ const PartnerDetails = [
     bgColor: '#F9F5F2',
   },
   {
-    linkTo: 'https://devfolio.co',
+    link: 'https://devfolio.co',
     image: '/images/partners/devfolio.png',
     bgColor: '#F9F5F2',
   },
