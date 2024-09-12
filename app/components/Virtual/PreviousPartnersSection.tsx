@@ -25,8 +25,8 @@ const PartnerDetails = [
     bgColor: '#F9F5F2',
   },
   {
-    link: 'https://www.logitech.com',
-    image: '/images/partners/logitech.png',
+    linkTo: 'https://devfolio.co',
+    image: '/images/partners/devfolio.png',
     bgColor: '#F9F5F2',
   },
   {
