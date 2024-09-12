@@ -95,7 +95,7 @@ const Header = ({
         <Flex
           fontSize="1.2rem"
           fontFamily="--var(--font-roboto-condensed)"
-          // pr="1rem"
+          pr="1rem"
           borderRight={isMd ? '2px solid #282826' : 'none'}
           py="0.3rem"
           fontWeight="600"

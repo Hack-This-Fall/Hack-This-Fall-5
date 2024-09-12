@@ -10,6 +10,11 @@ const PartnerDetails = [
     bgColor: '#F9F5F2',
   },
   {
+    linkTo: 'https://devfolio.co',
+    image: '/images/partners/devfolio.png',
+    bgColor: '#F9F5F2',
+  },
+  {
     link: 'https://github.com',
     image: '/images/partners/github.png',
     bgColor: '#F9F5F2',
@@ -22,11 +27,6 @@ const PartnerDetails = [
   {
     link: 'https://www.linode.com',
     image: '/images/partners/linode.png',
-    bgColor: '#F9F5F2',
-  },
-  {
-    linkTo: 'https://devfolio.co',
-    image: '/images/partners/devfolio.png',
     bgColor: '#F9F5F2',
   },
   {
