@@ -6,6 +6,7 @@ import {
   useBreakpointValue,
   Image,
 } from '@chakra-ui/react';
+import { useRouter } from 'next/navigation';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 
 interface Props {
@@ -39,6 +40,8 @@ const Tabs = [
 
 const NavLink = (props: Props) => {
   const { children, currentSection, title, setCurrentSection, onClose } = props;
+  const router = useRouter();
+
   return (
     <Box
       color={currentSection === title ? '#282826' : '#00000066'}
@@ -51,11 +54,15 @@ const NavLink = (props: Props) => {
       }}
       onClick={() => {
         setCurrentSection(title);
-        document.querySelector(`#${title}`)!.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start',
-          inline: 'nearest',
-        });
+        if (window.location.pathname !== '/virtual') {
+          router.push(`/virtual/#${title}`);
+        } else {
+          document.querySelector(`#${title}`)!.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+            inline: 'nearest',
+          });
+        }
         onClose();
       }}
     >
@@ -71,6 +78,7 @@ const Header = ({
   currentSection: string;
   setCurrentSection: React.Dispatch<React.SetStateAction<string>>;
 }) => {
+  const router = useRouter();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const isMd = useBreakpointValue({ base: false, md: true });
 
@@ -116,11 +124,15 @@ const Header = ({
                 }}
                 onClick={() => {
                   setCurrentSection(title);
-                  document.querySelector(`#${title}`)!.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start',
-                    inline: 'nearest',
-                  });
+                  if (window.location.pathname !== '/virtual') {
+                    router.push(`/virtual/#${title}`);
+                  } else {
+                    document.querySelector(`#${title}`)!.scrollIntoView({
+                      behavior: 'smooth',
+                      block: 'start',
+                      inline: 'nearest',
+                    });
+                  }
                 }}
               >
                 {title}

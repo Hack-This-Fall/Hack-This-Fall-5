@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import { ArrowForwardIcon } from "@chakra-ui/icons";
+import { ArrowForwardIcon } from '@chakra-ui/icons';
 import {
   Button,
   Flex,
@@ -9,7 +9,7 @@ import {
   Link,
   Text,
   useBreakpointValue,
-} from "@chakra-ui/react";
+} from '@chakra-ui/react';
 
 const HeroSection = () => {
   const isMobile = useBreakpointValue({ base: true, md: false });
@@ -134,7 +134,11 @@ const HeroSection = () => {
             borderRadius="full"
             border="2px solid #282826"
             boxShadow="2.95px 2.95px 0px 0px #000000"
-            _hover={{ bg: 'transparent', boxShadow: 'none' }}
+            _hover={{
+              bg: 'transparent',
+              boxShadow: '1px 1px 0px 0px #282826',
+              transform: 'translate(1.95px, 1.95px)',
+            }}
           >
             Join Discord
           </Button>
@@ -153,7 +157,11 @@ const HeroSection = () => {
             borderRadius="full"
             border="2px solid #282826"
             boxShadow="2.95px 2.95px 0px 0px #000000"
-            _hover={{ bg: '#746BEB', boxShadow: 'none' }}
+            _hover={{
+              bg: '#746BEB',
+              boxShadow: '1px 1px 0px 0px #282826',
+              transform: 'translate(1.95px, 1.95px)',
+            }}
           >
             Apply Now <ArrowForwardIcon ml="0.5rem" />
           </Button>

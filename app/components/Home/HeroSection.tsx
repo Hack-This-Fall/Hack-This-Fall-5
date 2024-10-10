@@ -141,7 +141,8 @@ const HeroSection = () => {
             boxShadow="2.95px 2.95px 0px 0px #000000"
             _hover={{
               bg: 'transparent',
-              boxShadow: 'none',
+                            boxShadow: '1px 1px 0px 0px #282826',
+              transform: 'translate(1.95px, 1.95px)',
               textDecoration: 'none',
             }}
           >
@@ -163,7 +164,8 @@ const HeroSection = () => {
             boxShadow="2.95px 2.95px 0px 0px #000000"
             _hover={{
               bg: '#746BEB',
-              boxShadow: 'none',
+                            boxShadow: '1px 1px 0px 0px #282826',
+              transform: 'translate(1.95px, 1.95px)',
               textDecoration: 'none',
             }}
           >
