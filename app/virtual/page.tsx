@@ -1,6 +1,6 @@
 'use client';
 
-import { Flex, Image } from '@chakra-ui/react';
+import { Flex } from '@chakra-ui/react';
 import HeroSection from '../components/Virtual/HeroSection';
 import React, { useState } from 'react';
 import { InView } from 'react-intersection-observer';
@@ -10,6 +10,7 @@ import PreviousPartnersSection from '../components/Virtual/PreviousPartnersSecti
 import FaqSection from '../components/Virtual/FaqSection';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import PrizesSection from '../components/Virtual/PrizesSection';
 
 const Page = () => {
   const [currentSection, setCurrentSection] = useState('HOME');
@@ -46,6 +47,15 @@ const Page = () => {
           onChange={(inView, entry) => inView && setCurrentSection('TRACKS')}
         >
           <TracksSection />
+        </InView>
+        <InView
+          style={{ width: '100%' }}
+          id="PRIZES"
+          as="div"
+          threshold={0.7}
+          onChange={(inView, entry) => inView && setCurrentSection('PRIZES')}
+        >
+          <PrizesSection />
         </InView>
         <InView
           style={{ width: '100%' }}

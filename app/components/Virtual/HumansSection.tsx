@@ -70,7 +70,7 @@ const HumansSection = () => {
       className="container-1200"
       flexDir="column"
       gap="3rem"
-      pt="7rem"
+      pt="9rem"
     >
       <Flex
         justifyContent={{ base: 'center', md: 'flex-start' }}

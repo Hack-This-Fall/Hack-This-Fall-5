@@ -27,9 +27,9 @@ const Tabs = [
   {
     title: 'TRACKS',
   },
-  //   {
-  //     title: 'PRIZE',
-  //   },
+  {
+    title: 'PRIZES',
+  },
   {
     title: 'HUMANS',
   },
