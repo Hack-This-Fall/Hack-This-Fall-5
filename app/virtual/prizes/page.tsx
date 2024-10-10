@@ -160,7 +160,12 @@ const Page = () => {
               ))}
             </Flex>
           ) : (
-            <Grid w="full" templateColumns="repeat(2, 1fr)" gap="4rem">
+            <Grid
+              w="full"
+              templateColumns="repeat(2, 1fr)"
+              columnGap={{ base: '2rem', md: '4rem' }}
+              rowGap={{ base: '4rem', md: '6rem' }}
+            >
               {Prizes.map((prize, index) => (
                 <GridItem
                   colSpan={index === 0 ? 2 : 1}
@@ -178,7 +183,7 @@ const Page = () => {
                   />
                   <Heading
                     fontFamily="var(--font-roboto-condensed)"
-                    fontSize={{ base: '3rem', md: '6rem' }}
+                    fontSize={{ base: '2.5rem', md: '6rem' }}
                     fontWeight="800"
                     pos="absolute"
                     top="50%"
@@ -189,7 +194,7 @@ const Page = () => {
                   </Heading>
                   <Flex
                     fontFamily="var(--font-roboto-condensed)"
-                    fontSize={{ base: '1rem', md: '1.8rem' }}
+                    fontSize={{ base: '0.8rem', md: '1.8rem' }}
                     py="0.3rem"
                     fontWeight="800"
                     pos="absolute"
