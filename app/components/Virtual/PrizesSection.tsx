@@ -1,53 +1,43 @@
-import { Flex, Grid, GridItem, Heading, Image, useBreakpointValue } from '@chakra-ui/react';
+import {
+  Flex,
+  Grid,
+  GridItem,
+  Heading,
+  Image,
+  useBreakpointValue,
+} from '@chakra-ui/react';
 
-const PrizesSection = () => {
+const PrizesSection = ({
+  pt = '0',
+  pb = '7rem',
+}: {
+  pt?: string;
+  pb?: string;
+}) => {
   const isXl = useBreakpointValue({ base: false, xl: true });
 
-  const Prizes = !isXl
-    ? [
-        {
-          title: 'WINNER',
-          amount: '$1000',
-        },
-        {
-          title: '1ST RUNNER UP',
-          amount: '$750',
-        },
-        {
-          title: '2ND RUNNER UP',
-          amount: '$500',
-        },
-        {
-          title: 'ALL GIRLS TEAM',
-          amount: '$250',
-        },
-        {
-          title: 'BEGINNERS TEAM',
-          amount: '$250',
-        },
-      ]
-    : [
-        {
-          title: '1ST RUNNER UP',
-          amount: '$750',
-        },
-        {
-          title: 'WINNER',
-          amount: '$1000',
-        },
-        {
-          title: '2ND RUNNER UP',
-          amount: '$500',
-        },
-        {
-          title: 'ALL GIRLS TEAM',
-          amount: '$250',
-        },
-        {
-          title: 'BEGINNERS TEAM',
-          amount: '$250',
-        },
-      ];
+  const Prizes = [
+    {
+      title: 'WINNER',
+      amount: '$1000',
+    },
+    {
+      title: '1ST RUNNER UP',
+      amount: '$750',
+    },
+    {
+      title: '2ND RUNNER UP',
+      amount: '$500',
+    },
+    {
+      title: 'ALL GIRLS TEAM',
+      amount: '$250',
+    },
+    {
+      title: 'BEGINNERS TEAM',
+      amount: '$250',
+    },
+  ];
 
   return (
     <Flex
@@ -56,6 +46,8 @@ const PrizesSection = () => {
       className="container-1200"
       flexDir="column"
       gap="3rem"
+      pt={pt}
+      pb={pb}
     >
       <Flex
         justifyContent={{ base: 'center', md: 'flex-start' }}

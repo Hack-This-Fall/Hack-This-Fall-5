@@ -55,7 +55,7 @@ const Page = () => {
           threshold={0.7}
           onChange={(inView, entry) => inView && setCurrentSection('PRIZES')}
         >
-          <PrizesSection />
+          <PrizesSection pt="7rem" pb="0" />
         </InView>
         <InView
           style={{ width: '100%' }}
