@@ -14,7 +14,7 @@ import {
   Link,
   Box,
 } from '@chakra-ui/react';
-import DropShadowBox from './DropShadowBox';
+import DropShadowBox from '../DropShadowBox';
 import { AddIcon, MinusIcon } from '@chakra-ui/icons';
 
 const FaqDetails = [
@@ -172,15 +172,15 @@ const FaqDetails = [
         color="#808080"
       >
         We are committed to providing a positive experience for all
-        participants. Please read our Community Code of Conduct for more details
-        here:{' '}
+        participants. Please read{' '}
         <Link
           color="#282826"
-          href="https://hackthisfall.tech/coc"
+          href="https://github.com/MLH/mlh-policies/blob/main/code-of-conduct.md"
           target="_blank"
         >
-          hackthisfall.tech/coc
-        </Link>
+          MLH &apos;s Code of Conduct
+        </Link>{' '}
+        for more details
       </AccordionPanel>
     ),
   },

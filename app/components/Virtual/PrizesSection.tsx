@@ -4,8 +4,10 @@ import {
   GridItem,
   Heading,
   Image,
+  Link,
   useBreakpointValue,
 } from '@chakra-ui/react';
+import { ArrowForwardIcon } from '@chakra-ui/icons';
 
 const PrizesSection = ({
   pt = '0',
@@ -74,111 +76,114 @@ const PrizesSection = ({
           PRIZES
         </Heading>
       </Flex>
-      {isXl ? (
-        <Flex
-          w="full"
-          justifyContent="center"
-          flexWrap="wrap"
-          columnGap="4rem"
-          rowGap="6rem"
-        >
-          {Prizes.map((prize, index) => (
-            <Flex pos="relative" key={index} w={{ base: '40%', xl: '25%' }}>
-              <Image
-                w="full"
-                h="full"
-                src="/images/prizes/container.svg"
-                alt="Prize"
-              />
-              <Heading
-                fontFamily="var(--font-roboto-condensed)"
-                fontSize={{ base: '3rem', md: '6rem' }}
-                fontWeight="800"
-                pos="absolute"
-                top="50%"
-                left="50%"
-                transform="translate(-50%, -50%)"
-              >
-                {prize.amount}
-              </Heading>
-              <Flex
-                fontFamily="var(--font-roboto-condensed)"
-                fontSize={{ base: '1rem', md: '1.8rem' }}
-                py="0.3rem"
-                fontWeight="800"
-                pos="absolute"
-                top="100%"
-                w="80%"
-                left="50%"
-                transform="translate(-50%, -50%)"
-                textAlign="center"
-                justifyContent="center"
-                bgColor="#FFC700"
-                rounded="full"
-                border="2px solid #282826"
-                boxShadow="2.95px 2.95px 0px 0px #000000"
-              >
-                {prize.title}
-              </Flex>
-            </Flex>
-          ))}
-        </Flex>
-      ) : (
-        <Grid
-          w="full"
-          templateColumns="repeat(2, 1fr)"
-          columnGap={{ base: '2rem', md: '4rem' }}
-          rowGap={{ base: '4rem', md: '6rem' }}
-        >
-          {Prizes.map((prize, index) => (
-            <GridItem
-              colSpan={index === 0 ? 2 : 1}
-              display="flex"
-              pos="relative"
-              key={index}
-              w={index === 0 ? 'calc((100% - 4rem)/2)' : 'full'}
-              justifySelf="center"
+      <Flex
+        w="full"
+        justifyContent="center"
+        flexWrap="wrap"
+        columnGap={{ base: '2rem', md: '4rem' }}
+        rowGap={{ base: '4rem', md: '6rem' }}
+      >
+        {Prizes.map((prize, index) => (
+          <Flex pos="relative" key={index} w={{ base: '45%', xl: '25%' }}>
+            <Image
+              w="full"
+              h="full"
+              src="/images/prizes/container.svg"
+              alt="Prize"
+            />
+            <Heading
+              fontFamily="var(--font-roboto-condensed)"
+              fontSize={{ base: '3rem', md: '6rem' }}
+              fontWeight="800"
+              pos="absolute"
+              top="50%"
+              left="50%"
+              transform="translate(-50%, -50%)"
             >
-              <Image
-                w="full"
-                h="full"
-                src="/images/prizes/container.svg"
-                alt="Prize"
-              />
-              <Heading
-                fontFamily="var(--font-roboto-condensed)"
-                fontSize={{ base: '2.5rem', md: '6rem' }}
-                fontWeight="800"
-                pos="absolute"
-                top="50%"
-                left="50%"
-                transform="translate(-50%, -50%)"
-              >
-                {prize.amount}
-              </Heading>
-              <Flex
-                fontFamily="var(--font-roboto-condensed)"
-                fontSize={{ base: '0.8rem', md: '1.8rem' }}
-                py="0.3rem"
-                fontWeight="800"
-                pos="absolute"
-                top="100%"
-                w="80%"
-                left="50%"
-                transform="translate(-50%, -50%)"
-                textAlign="center"
-                justifyContent="center"
-                bgColor="#FFC700"
-                rounded="full"
-                border="2px solid #282826"
-                boxShadow="2.95px 2.95px 0px 0px #000000"
-              >
-                {prize.title}
-              </Flex>
-            </GridItem>
-          ))}
-        </Grid>
-      )}
+              {prize.amount}
+            </Heading>
+            <Flex
+              fontFamily="var(--font-roboto-condensed)"
+              fontSize={{ base: '0.8rem', md: '1.8rem' }}
+              py="0.3rem"
+              fontWeight="800"
+              pos="absolute"
+              top="100%"
+              w="80%"
+              left="50%"
+              transform="translate(-50%, -50%)"
+              textAlign="center"
+              justifyContent="center"
+              bgColor="#FFC700"
+              rounded="full"
+              border="2px solid #282826"
+              boxShadow="2.95px 2.95px 0px 0px #000000"
+            >
+              {prize.title}
+            </Flex>
+          </Flex>
+        ))}
+        <Flex
+          as={Link}
+          href="/virtual/prizes"
+          pos="relative"
+          w={{ base: '40%', xl: '25%' }}
+          _hover={{
+            cursor: 'pointer',
+            '#arrow': {
+              transform: 'translate(-50%, -50%)',
+              transition: 'transform 0.3s ease-in-out',
+            },
+          }}
+        >
+          <Image
+            w="full"
+            h="full"
+            src="/images/prizes/container.svg"
+            alt="Prize"
+          />
+          <Flex
+            pos="absolute"
+            top="50%"
+            left="50%"
+            transform="translate(-50%, -50%)"
+          >
+            <Image src="/images/prizes/morePrizes.svg" alt="Prize" />
+          </Flex>
+          <Flex
+            fontFamily="var(--font-roboto-condensed)"
+            fontSize={{ base: '0.8rem', md: '1.8rem' }}
+            py="0.3rem"
+            fontWeight="800"
+            pos="absolute"
+            top="100%"
+            w="80%"
+            left="50%"
+            transform="translate(-50%, -50%)"
+            textAlign="center"
+            justifyContent="center"
+            bgColor="#C693FF"
+            rounded="full"
+            border="2px solid #282826"
+            boxShadow="2.95px 2.95px 0px 0px #000000"
+          >
+            MORE PRIZES
+          </Flex>
+          <Flex
+            pos="absolute"
+            top="25px"
+            right="-10px"
+            id="arrow"
+            transform="translate(-50%, -50%) rotate(-45deg)"
+            p="0.5rem"
+            borderRadius="full"
+            border="1px solid #282826"
+            bgColor="#F9F5F2"
+          >
+            <ArrowForwardIcon fontSize="1.5rem" color="#282826" />
+          </Flex>
+        </Flex>
+      </Flex>
     </Flex>
   );
 };

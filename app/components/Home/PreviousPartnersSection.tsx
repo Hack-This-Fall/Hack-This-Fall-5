@@ -1,7 +1,7 @@
 'use client';
 
 import { Flex, Heading, Image, Link, SimpleGrid } from '@chakra-ui/react';
-import DropShadowBox from './DropShadowBox';
+import DropShadowBox from '../DropShadowBox';
 
 const PartnerDetails = [
   {
@@ -114,7 +114,7 @@ const PreviousPartnersSection = () => {
       className="container-1200"
       flexDir="column"
       gap="3rem"
-      pt="7rem"
+      py="7rem"
     >
       <Flex
         justifyContent={{ base: 'center', md: 'flex-start' }}

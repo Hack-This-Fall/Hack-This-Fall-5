@@ -4,13 +4,30 @@ import { Flex } from '@chakra-ui/react';
 import HeroSection from '../components/Virtual/HeroSection';
 import React, { useState } from 'react';
 import { InView } from 'react-intersection-observer';
-import HumansSection from '../components/Virtual/HumansSection';
 import TracksSection from '../components/Virtual/TracksSection';
-import PreviousPartnersSection from '../components/Virtual/PreviousPartnersSection';
+import PartnersSection from '../components/Virtual/PartnersSection';
 import FaqSection from '../components/Virtual/FaqSection';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import PrizesSection from '../components/Virtual/PrizesSection';
+
+const Tabs = [
+  {
+    title: 'HOME',
+  },
+  {
+    title: 'TRACKS',
+  },
+  {
+    title: 'PRIZES',
+  },
+  {
+    title: 'PARTNERS',
+  },
+  {
+    title: 'FAQ',
+  },
+];
 
 const Page = () => {
   const [currentSection, setCurrentSection] = useState('HOME');
@@ -20,6 +37,8 @@ const Page = () => {
       <Header
         setCurrentSection={setCurrentSection}
         currentSection={currentSection}
+        isVirtual
+        tabs={Tabs}
       />
       <Flex
         background="#F9F5F2"
@@ -59,21 +78,12 @@ const Page = () => {
         </InView>
         <InView
           style={{ width: '100%' }}
-          id="HUMANS"
-          as="div"
-          threshold={0.7}
-          onChange={(inView, entry) => inView && setCurrentSection('HUMANS')}
-        >
-          <HumansSection />
-        </InView>
-        <InView
-          style={{ width: '100%' }}
           id="PARTNERS"
           as="div"
           threshold={0.7}
           onChange={(inView, entry) => inView && setCurrentSection('PARTNERS')}
         >
-          <PreviousPartnersSection />
+          <PartnersSection />
         </InView>
         <InView
           style={{ width: '100%' }}
