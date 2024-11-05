@@ -8,12 +8,12 @@ import {
   Link,
   Grid,
   GridItem,
+  SimpleGrid,
+  Text,
 } from '@chakra-ui/react';
-import { ArrowForwardIcon  } from '@chakra-ui/icons';
 import React, { useState } from 'react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import PrizesSection from '../../components/Virtual/PrizesSection';
 
 const Tabs = [
   {
@@ -26,7 +26,7 @@ const Tabs = [
     title: 'PRIZES',
   },
   {
-    title: 'HUMANS',
+    title: 'PARTNERS',
   },
   {
     title: 'FAQ',
@@ -56,6 +56,54 @@ const Prizes = [
   },
 ];
 
+const SponsoredPrizes = [
+  {
+    logo: '/images/partners/github.png',
+    title: 'Best Use of GitHub',
+    description:
+      "Stand a chance to win GitHub Mona figurine or plushy in two simple steps. Sign up for GitHub Global Campus. Use a GitHub repository to host your hackathon project 's code.",
+    link: 'https://bit.ly/htf24v-ge',
+    bgColor: '#FFF',
+    shadowColor: '#000000',
+  },
+  {
+    logo: '/images/partners/streamlit.png',
+    title: 'Best Use of Streamlit',
+    description:
+      'Hack with Streamlit this weekend for a chance to win an Arduino Tiny ML Kit for you and each member for your team.',
+    link: 'https://hack.mlh.io/hack-this-fall-2024/prizes',
+    bgColor: '#FFF',
+    shadowColor: '#FF4C4B',
+  },
+  {
+    logo: '/images/partners/mongoDbGreen.png',
+    title: 'Best Use of MongoDB Atlas',
+    description:
+      'Build a hack using MongoDB Atlas for a chance to win a M5GO IoT Starter Kit for you and each member of your team.',
+    link: 'https://hack.mlh.io/hack-this-fall-2024/prizes',
+    bgColor: '#FFF',
+    shadowColor: '#00694A',
+  },
+  {
+    logo: '/images/partners/databricks.png',
+    title: 'Best AI Project with Databricks Open Source',
+    description:
+      'Build an AI powered project utilizing Databricks Open Source projects for a chance to win Assorted Lego Sets for you and your teammates.',
+    link: 'https://hack.mlh.io/hack-this-fall-2024/prizes',
+    bgColor: '#FFF',
+    shadowColor: '#EE3D2B',
+  },
+  {
+    logo: '/images/partners/auth0.png',
+    title: 'Best Use of Auth0',
+    description:
+      'Build a hack using Auth0 APIs for a chance to win a Wireless Headphones for you and each member of your team.',
+    link: 'https://hack.mlh.io/hack-this-fall-2024/prizes',
+    bgColor: '#FFF',
+    shadowColor: '#000000',
+  },
+];
+
 const Page = () => {
   const [currentSection, setCurrentSection] = useState('HOME');
   const isXl = useBreakpointValue({ base: false, xl: true });
@@ -66,6 +114,7 @@ const Page = () => {
         setCurrentSection={setCurrentSection}
         currentSection={currentSection}
         tabs={Tabs}
+        isVirtual
       />
       <Flex
         background="#F9F5F2"
@@ -93,12 +142,12 @@ const Page = () => {
           >
             <Image
               h={{ base: '3rem', md: '5rem', '2xl': '6rem' }}
-              src="/images/icons/backGreenArrows.svg"
-              alt="Orange Ball"
+              src="/images/icons/orangeStar.svg"
+              alt="Orange Star"
             />
             <Image
               h={{ base: '3rem', md: '5rem', '2xl': '6rem' }}
-              src="/images/icons/yellowBall.svg"
+              src="/images/icons/greenPill.svg"
               alt="Green Pill"
             />
             <Heading
@@ -215,6 +264,74 @@ const Page = () => {
               ))}
             </Grid>
           )}
+          <Flex pt="7rem" w="full" flexDir="column">
+            <Flex
+              justifyContent={{ base: 'center', md: 'flex-start' }}
+              alignItems="center"
+              gap="1rem"
+              maxW="100%"
+            >
+              <Image
+                h={{ base: '3rem', md: '5rem', '2xl': '6rem' }}
+                src="/images/icons/backGreenArrows.svg"
+                alt="Orange Ball"
+              />
+              <Image
+                h={{ base: '3rem', md: '5rem', '2xl': '6rem' }}
+                src="/images/icons/yellowBall.svg"
+                alt="Green Pill"
+              />
+              <Heading
+                color="#282826"
+                fontFamily="var(--font-roboto-condensed)"
+                fontSize={{ base: '3rem', md: '5rem', '2xl': '6rem' }}
+                fontWeight="600"
+              >
+                PARTNER PRIZES
+              </Heading>
+            </Flex>
+            <SimpleGrid
+              templateColumns={{
+                base: '1fr',
+                md: 'repeat(2, 1fr)',
+                lg: 'repeat(3, 1fr)',
+              }}
+              gap="1rem"
+              pt="3rem"
+            >
+              {SponsoredPrizes.map((prize, index) => (
+                <Flex
+                  as={Link}
+                  href={prize.link}
+                  justifyContent="space-between"
+                  target="_blank"
+                  gap="1.5rem"
+                  key={index}
+                  flexDir="column"
+                  p="1.5rem"
+                  borderRadius="1rem"
+                  bgColor={prize.bgColor}
+                  border={`1px solid ${prize.shadowColor}`}
+                  boxShadow={`3px 3px 0px 0px ${prize.shadowColor}`}
+                >
+                  <Image src={prize.logo} alt="Prize" w="40%" />
+                  <Heading
+                    fontFamily="var(--font-outfit)"
+                    fontSize={{ base: '1rem', md: '1.8rem' }}
+                    fontWeight="800"
+                  >
+                    {prize.title}
+                  </Heading>
+                  <Text
+                    fontFamily="var(--font-outfit)"
+                    fontSize={{ base: '0.8rem', md: '1.4rem' }}
+                  >
+                    {prize.description}
+                  </Text>
+                </Flex>
+              ))}
+            </SimpleGrid>
+          </Flex>
         </Flex>
         <Footer />
       </Flex>

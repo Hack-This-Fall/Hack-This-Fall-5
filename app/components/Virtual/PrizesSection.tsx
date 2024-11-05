@@ -131,7 +131,7 @@ const PrizesSection = ({
           _hover={{
             cursor: 'pointer',
             '#arrow': {
-              transform: 'translate(-50%, -50%)',
+              transform: 'rotate(0deg)',
               transition: 'transform 0.3s ease-in-out',
             },
           }}
@@ -173,14 +173,19 @@ const PrizesSection = ({
             pos="absolute"
             top="25px"
             right="-10px"
-            id="arrow"
-            transform="translate(-50%, -50%) rotate(-45deg)"
+            transform="translate(-50%, -50%)"
             p="0.5rem"
             borderRadius="full"
             border="1px solid #282826"
+            boxShadow="2.5px 2.5px 0px 0px #282826"
             bgColor="#F9F5F2"
           >
-            <ArrowForwardIcon fontSize="1.5rem" color="#282826" />
+            <ArrowForwardIcon
+              id="arrow"
+              transform="rotate(-45deg)"
+              fontSize="1.5rem"
+              color="#282826"
+            />
           </Flex>
         </Flex>
       </Flex>
