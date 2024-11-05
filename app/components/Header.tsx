@@ -34,7 +34,7 @@ const NavLink = (props: Props) => {
       }}
       onClick={() => {
         setCurrentSection(title);
-        if (isVirtual && window.location.pathname.includes('/virtual')) {
+        if (isVirtual && window.location.pathname !== '/virtual') {
           router.push(`/virtual/#${title}`);
         } else if (!isVirtual && window.location.pathname !== '/') {
           router.push(`/#${title}`);
@@ -110,10 +110,7 @@ const Header = ({
                 }}
                 onClick={() => {
                   setCurrentSection(title);
-                  if (
-                    isVirtual &&
-                    window.location.pathname.includes('/virtual')
-                  ) {
+                  if (isVirtual && window.location.pathname !== '/virtual') {
                     router.push(`/virtual/#${title}`);
                   } else if (!isVirtual && window.location.pathname !== '/') {
                     router.push(`/#${title}`);
