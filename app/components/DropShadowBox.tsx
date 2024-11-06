@@ -6,11 +6,13 @@ const DropShadowBox = ({
   borderRadius = '1rem',
   aspectRatio = '1',
   link = '',
+  bgColor = '',
 }: {
   children: React.ReactNode;
   w?: string;
   borderRadius?: string;
   aspectRatio?: string;
+  bgColor?: string;
   link?: string;
 }) => {
   return (
@@ -22,6 +24,7 @@ const DropShadowBox = ({
       }}
       w={w}
       justifyContent="center"
+      bgColor={bgColor ? bgColor : 'transparent'}
       alignItems="center"
       position="relative"
       boxShadow="6px 6px 0px 0px #282826"

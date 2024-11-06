@@ -13,13 +13,14 @@ interface Props {
   children: React.ReactNode;
   currentSection: string;
   title: string;
+  link?: string;
   isVirtual?: boolean;
   setCurrentSection: React.Dispatch<React.SetStateAction<string>>;
   onClose: () => void;
 }
 
 const NavLink = (props: Props) => {
-  const { children, currentSection, title, isVirtual, setCurrentSection, onClose } = props;
+  const { children, currentSection, title, link, isVirtual, setCurrentSection, onClose } = props;
   const router = useRouter();
 
   return (
@@ -33,6 +34,10 @@ const NavLink = (props: Props) => {
         color: '#282826',
       }}
       onClick={() => {
+        if (link) {
+          router.push(link);
+          return;
+        }
         setCurrentSection(title);
         if (isVirtual && window.location.pathname !== '/virtual') {
           router.push(`/virtual/#${title}`);
@@ -62,7 +67,7 @@ const Header = ({
   currentSection: string;
   setCurrentSection: React.Dispatch<React.SetStateAction<string>>;
   isVirtual?: boolean;
-  tabs: { title: string }[];
+  tabs: { title: string, link?: string }[];
 }) => {
   const router = useRouter();
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -98,7 +103,7 @@ const Header = ({
         </Flex>
         {isMd && (
           <Flex gap="1rem" fontWeight="600">
-            {tabs.map(({ title }, index) => (
+            {tabs.map(({ title, link }, index) => (
               <Flex
                 color={currentSection === title ? '#282826' : '#00000066'}
                 key={index}
@@ -109,6 +114,11 @@ const Header = ({
                   color: '#282826',
                 }}
                 onClick={() => {
+                  if (link) {
+                    router.push(link);
+                    return;
+                  }
+
                   setCurrentSection(title);
                   if (isVirtual && window.location.pathname !== '/virtual') {
                     router.push(`/virtual/#${title}`);
@@ -174,6 +184,7 @@ const Header = ({
                 setCurrentSection={setCurrentSection}
                 currentSection={currentSection}
                 title={tabs.title}
+                link={tabs.link}
                 key={index}
                 onClose={onClose}
               >

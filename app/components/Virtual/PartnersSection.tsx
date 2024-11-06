@@ -83,6 +83,63 @@ const HackathonPartners = [
       '2xl': 'repeat(3, 25rem)',
     },
   },
+  {
+    title: 'COMMUNITY',
+    color: '#FFF',
+    partners: [
+      {
+        link: 'https://hackon.tech/',
+        image: '/images/partners/hackathon/hackon.svg',
+        bgColor: '#F9F5F2',
+      },
+      {
+        link: 'https://hacktheleague.com/',
+        image: '/images/partners/hackathon/htl.png',
+        bgColor: '#F9F5F2',
+      },
+      {
+        link: 'https://linktr.ee/gurlscodingclub',
+        image: '/images/partners/hackathon/gurls.jpg',
+        bgColor: '#F9F5F2',
+      },
+      {
+        link: 'https://startupsdilse.com/',
+        image: '/images/partners/hackathon/startup.png',
+        bgColor: '#F9F5F2',
+      },
+      {
+        link: 'https://www.apexia.tech/',
+        image: '/images/partners/hackathon/apexia.png',
+        bgColor: '#F9F5F2',
+      },
+      {
+        link: 'https://cityjsconf.org/',
+        image: '/images/partners/hackathon/cityjs.png',
+        bgColor: '#F9F5F2',
+      },
+      {
+        link: 'https://www.linkedin.com/company/flutter-jaipur/',
+        image: '/images/partners/hackathon/flutter.png',
+        bgColor: '#F9F5F2',
+      },
+      {
+        link: 'https://www.thecodebird.in/',
+        image: '/images/partners/hackathon/codebird.png',
+        bgColor: '#F9F5F2',
+      },
+      {
+        link: 'https://linktr.ee/learnersden',
+        image: '/images/partners/hackathon/LD.svg',
+        bgColor: '#F9F5F2',
+      },
+    ],
+    columnConfig: {
+      base: 'repeat(2, 13rem)',
+      md: 'repeat(2, 15rem)',
+      lg: 'repeat(3, 20rem)',
+      '2xl': 'repeat(5, 1fr)',
+    },
+  },
 ];
 
 const PartnersSection = () => {
