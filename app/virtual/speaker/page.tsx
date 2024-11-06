@@ -15,11 +15,43 @@ import {
   SimpleGrid,
 } from '@chakra-ui/react';
 import React, { useState } from 'react';
-import DropShadowBox from '../../components/Virtual/DropShadowBox';
+import DropShadowBox from '../../components/DropShadowBox';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 
-const TabsData = {
+interface TabsDataType {
+  [key: string]: {
+    title: string;
+    speaker: string;
+    Timestamp: string;
+    link: string;
+    speakerImage: string;
+  }[];
+}
+
+const TabsDetails = [
+  {
+    title: 'HOME',
+  },
+  {
+    title: 'TRACKS',
+  },
+  {
+    title: 'PRIZES',
+  },
+  {
+    title: 'SCHEDULE',
+    link: '/virtual/schedule',
+  },
+  {
+    title: 'PARTNERS',
+  },
+  {
+    title: 'FAQ',
+  },
+];
+
+const TabsData: TabsDataType = {
   'Day 1': [
     {
       title: 'Speaker session 1',
@@ -120,6 +152,8 @@ const Page = () => {
       <Header
         setCurrentSection={setCurrentSection}
         currentSection={currentSection}
+        isVirtual
+        tabs={TabsDetails}
       />
       <Flex
         background="#F9F5F2"
