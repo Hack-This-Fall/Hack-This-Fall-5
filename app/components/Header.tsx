@@ -6,39 +6,22 @@ import {
   useBreakpointValue,
   Image,
 } from '@chakra-ui/react';
+import { useRouter } from 'next/navigation';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 
 interface Props {
   children: React.ReactNode;
   currentSection: string;
   title: string;
+  isVirtual?: boolean;
   setCurrentSection: React.Dispatch<React.SetStateAction<string>>;
   onClose: () => void;
 }
 
-const Tabs = [
-  {
-    title: 'HOME',
-  },
-  //   {
-  //     title: 'ABOUT',
-  //   },
-  {
-    title: 'TRACKS',
-  },
-  //   {
-  //     title: 'PRIZE',
-  //   },
-  {
-    title: 'HUMANS',
-  },
-  {
-    title: 'FAQ',
-  },
-];
-
 const NavLink = (props: Props) => {
-  const { children, currentSection, title, setCurrentSection, onClose } = props;
+  const { children, currentSection, title, isVirtual, setCurrentSection, onClose } = props;
+  const router = useRouter();
+
   return (
     <Box
       color={currentSection === title ? '#282826' : '#00000066'}
@@ -51,11 +34,17 @@ const NavLink = (props: Props) => {
       }}
       onClick={() => {
         setCurrentSection(title);
-        document.querySelector(`#${title}`)!.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start',
-          inline: 'nearest',
-        });
+        if (isVirtual && window.location.pathname !== '/virtual') {
+          router.push(`/virtual/#${title}`);
+        } else if (!isVirtual && window.location.pathname !== '/') {
+          router.push(`/#${title}`);
+        } else {
+          document.querySelector(`#${title}`)!.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+            inline: 'nearest',
+          });
+        }
         onClose();
       }}
     >
@@ -67,10 +56,15 @@ const NavLink = (props: Props) => {
 const Header = ({
   currentSection,
   setCurrentSection,
+  isVirtual = false,
+  tabs,
 }: {
   currentSection: string;
   setCurrentSection: React.Dispatch<React.SetStateAction<string>>;
+  isVirtual?: boolean;
+  tabs: { title: string }[];
 }) => {
+  const router = useRouter();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const isMd = useBreakpointValue({ base: false, md: true });
 
@@ -104,7 +98,7 @@ const Header = ({
         </Flex>
         {isMd && (
           <Flex gap="1rem" fontWeight="600">
-            {Tabs.map(({ title }, index) => (
+            {tabs.map(({ title }, index) => (
               <Flex
                 color={currentSection === title ? '#282826' : '#00000066'}
                 key={index}
@@ -116,11 +110,17 @@ const Header = ({
                 }}
                 onClick={() => {
                   setCurrentSection(title);
-                  document.querySelector(`#${title}`)!.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start',
-                    inline: 'nearest',
-                  });
+                  if (isVirtual && window.location.pathname !== '/virtual') {
+                    router.push(`/virtual/#${title}`);
+                  } else if (!isVirtual && window.location.pathname !== '/') {
+                    router.push(`/#${title}`);
+                  } else {
+                    document.querySelector(`#${title}`)!.scrollIntoView({
+                      behavior: 'smooth',
+                      block: 'start',
+                      inline: 'nearest',
+                    });
+                  }
                 }}
               >
                 {title}
@@ -168,8 +168,9 @@ const Header = ({
           display={{ md: 'none' }}
         >
           <Stack as={'nav'} spacing={6}>
-            {Tabs.map((tabs, index) => (
+            {tabs.map((tabs, index) => (
               <NavLink
+                isVirtual={isVirtual}
                 setCurrentSection={setCurrentSection}
                 currentSection={currentSection}
                 title={tabs.title}

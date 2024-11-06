@@ -17,7 +17,11 @@ const DropShadowBox = ({
 }) => {
   return (
     <Flex
-      {...{ as: link ? 'a' : 'div', href: link ? link : undefined, target: '_blank' }}
+      {...{
+        as: link ? 'a' : 'div',
+        href: link ? link : undefined,
+        target: '_blank',
+      }}
       w={w}
       justifyContent="center"
       bgColor={bgColor ? bgColor : 'transparent'}
@@ -29,7 +33,10 @@ const DropShadowBox = ({
       flexDir="column"
       overflow="hidden"
       aspectRatio={aspectRatio}
-      _hover={{ boxShadow: 'none' }}
+      _active={{
+        boxShadow: '3px 3px 0px 0px #282826',
+        transform: 'translate(3px, 3px)',
+      }}
     >
       {children}
     </Flex>

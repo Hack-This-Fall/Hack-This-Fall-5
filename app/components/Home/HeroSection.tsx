@@ -18,7 +18,6 @@ const HeroSection = () => {
     <Flex
       background="#F9F5F2"
       w="full"
-      h="100dvh"
       className="container-1200"
       justifyContent="center"
       alignItems="center"
@@ -102,7 +101,7 @@ const HeroSection = () => {
             mb={{ base: '4rem', xl: '0' }}
             mt={{ base: '2rem', xl: '0' }}
           >
-            2025 In-Person Hackathon <br /> Coming Soon
+            2025 In-Person Hackathon <br /> Applications Open Soon
           </Text>
         ) : (
           <Text
@@ -116,7 +115,7 @@ const HeroSection = () => {
             mb={{ base: '4rem', xl: '0' }}
             mt={{ base: '2rem', xl: '0' }}
           >
-            2025 In-Person Hackathon • Coming Soon
+            2025 In-Person Hackathon • Applications Open Soon
           </Text>
         )}
         <Flex
@@ -124,7 +123,7 @@ const HeroSection = () => {
           gap={{ base: '1rem', xl: '1.5rem' }}
           w={{ base: 'full', xl: 'auto' }}
         >
-          <Button
+          {/* <Button
             as={Link}
             href="https://discord.hackthisfall.tech"
             target="_blank"
@@ -141,15 +140,17 @@ const HeroSection = () => {
             boxShadow="2.95px 2.95px 0px 0px #000000"
             _hover={{
               bg: 'transparent',
-              boxShadow: 'none',
+              boxShadow: '1px 1px 0px 0px #282826',
+              transform: 'translate(1.95px, 1.95px)',
               textDecoration: 'none',
             }}
           >
             Join Discord
-          </Button>
+          </Button> */}
           <Button
             as={Link}
-            href="/virtual"
+            href="https://discord.hackthisfall.tech"
+            target="_blank"
             color="#fff"
             fontFamily="var(--font-roboto-condensed)"
             fontSize="1.5rem"
@@ -163,11 +164,12 @@ const HeroSection = () => {
             boxShadow="2.95px 2.95px 0px 0px #000000"
             _hover={{
               bg: '#746BEB',
-              boxShadow: 'none',
+              boxShadow: '1px 1px 0px 0px #282826',
+              transform: 'translate(1.95px, 1.95px)',
               textDecoration: 'none',
             }}
           >
-            Join Virtually <ArrowForwardIcon ml="0.5rem" />
+            Join Discord <ArrowForwardIcon ml="0.5rem" />
           </Button>
         </Flex>
       </Flex>

@@ -17,7 +17,7 @@ const footer = [
       },
       {
         title: 'COC',
-        link: 'https://hackthisfall.tech/coc',
+        link: 'https://github.com/MLH/mlh-policies/blob/main/code-of-conduct.md',
       },
     ],
   },
