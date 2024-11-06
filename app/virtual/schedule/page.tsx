@@ -36,7 +36,18 @@ const TabsData = [
   },
 ];
 
-const HackathonSchedule = {
+interface ScheduleItem {
+  title: string;
+  startTimestamp: moment.Moment;
+  endTimestamp: moment.Moment;
+  platform: string;
+}
+
+interface HackathonSchedule {
+  [key: string]: ScheduleItem[];
+}
+
+const HackathonSchedule: HackathonSchedule = {
   'Day 1 - November 8': [
     {
       title: 'Opening Ceremony + Ask Me Anything',
