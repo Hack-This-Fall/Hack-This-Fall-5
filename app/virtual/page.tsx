@@ -22,6 +22,10 @@ const Tabs = [
     title: 'PRIZES',
   },
   {
+    title: 'SCHEDULE',
+    link: '/virtual/schedule',
+  },
+  {
     title: 'PARTNERS',
   },
   {
