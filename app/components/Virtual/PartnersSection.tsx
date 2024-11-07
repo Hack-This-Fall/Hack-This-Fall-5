@@ -9,7 +9,7 @@ const PlatinumPartners = [
     color: '#F3CEB4',
     partners: [
       {
-        link: 'https://github.com',
+        link: 'https://bit.ly/htf24v-ge',
         image: '/images/partners/github.png',
         bgColor: '#F9F5F2',
       },
@@ -71,7 +71,7 @@ const HackathonPartners = [
     color: '#7FBC8C',
     partners: [
       {
-        link: 'https://mlh.io',
+        link: 'https://developers.google.com',
         image: '/images/partners/google.png',
         bgColor: '#F9F5F2',
       },
@@ -103,6 +103,38 @@ const HackathonPartners = [
 ];
 
 const CoommunityPartners = [
+  {
+    title: 'INKIND',
+    color: '#FFF',
+    partners: [
+      {
+        link: 'https://hack.mlh.io/hack-this-fall-2024/prizes',
+        image: '/images/partners/mongoDbGreen.png',
+        bgColor: '#F9F5F2',
+      },
+      {
+        link: 'https://hack.mlh.io/hack-this-fall-2024/prizes',
+        image: '/images/partners/streamlit.png',
+        bgColor: '#F9F5F2',
+      },
+      {
+        link: 'https://hack.mlh.io/hack-this-fall-2024/prizes',
+        image: '/images/partners/databricks.png',
+        bgColor: '#F9F5F2',
+      },
+      {
+        link: 'https://hack.mlh.io/hack-this-fall-2024/prizes',
+        image: '/images/partners/auth0.png',
+        bgColor: '#F9F5F2',
+      },
+    ],
+    columnConfig: {
+      base: 'repeat(2, 1fr)',
+      md: 'repeat(3, 1fr)',
+      lg: 'repeat(4, 1fr)',
+      '2xl': 'repeat(5, 1fr)',
+    },
+  },
   {
     title: 'COMMUNITY',
     color: '#FFF',
@@ -150,6 +182,11 @@ const CoommunityPartners = [
       {
         link: 'https://linktr.ee/learnersden',
         image: '/images/partners/hackathon/LD.svg',
+        bgColor: '#F9F5F2',
+      },
+      {
+        link: 'https://bento.me/thecyborgs',
+        image: '/images/partners/hackathon/cyborgs.png',
         bgColor: '#F9F5F2',
       },
     ],

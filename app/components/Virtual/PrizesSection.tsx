@@ -32,7 +32,7 @@ const PrizesSection = ({
       amount: '$500',
     },
     {
-      title: 'ALL GIRLS TEAM',
+      title: 'ALL WOMEN TEAM',
       amount: '$250',
     },
     {
