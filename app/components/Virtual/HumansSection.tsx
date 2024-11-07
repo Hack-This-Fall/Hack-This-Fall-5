@@ -205,7 +205,7 @@ const HumansSection = () => {
         }}
         gap="1rem"
       >
-        {HumanDetails.map(({ image, name, link }, index) => (
+        {HumanDetails.sort((a, b) => a.name.localeCompare(b.name)).map(({ image, name, link }, index) => (
           <DropShadowBox link={link} key={index} w="full" aspectRatio="0.9" bgColor="#000">
             <Image src={image} alt={name} w="full" h="full" objectFit="cover" />
             <Flex

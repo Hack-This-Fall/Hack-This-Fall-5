@@ -76,7 +76,7 @@ const SponsoredPrizes = [
     title: 'Peerlist Project Spotlight',
     description:
       'Showcase your project on Peerlist to win top recognition, valuable exposure, and a special achievement badge for credibility.',
-    link: 'https://bit.ly/htf24v-github-challenge',
+    link: 'https://bit.ly/htf24v-peerlist-spotlight',
     bgColor: '#FFF',
     shadowColor: '#00AA45',
   },
@@ -128,7 +128,7 @@ const FunPrizes = [
     shadowColor: '#FF9B38',
   },
   {
-    logo: '/images/logo.png',
+    logo: '/images/partners/github.png',
     title: "GitHub's Draw an Octocat Challenge",
     description:
       '⁠Draw your own Mona in whatever medium you choose and stand a chance to win GitHub Tshirt by posting your art on X (Twitter). Make sure to tag us @githubeducation @hackthisfall and use the hashtags #MyOctocat #HackThisFallVirtual.',
