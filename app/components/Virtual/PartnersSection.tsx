@@ -100,6 +100,9 @@ const HackathonPartners = [
       '2xl': 'repeat(3, 25rem)',
     },
   },
+];
+
+const CoommunityPartners = [
   {
     title: 'COMMUNITY',
     color: '#FFF',
@@ -298,8 +301,62 @@ const PartnersSection = () => {
             ),
           )}
         </SimpleGrid>
-        <Flex flexDir="column" gap="4rem">
+        <SimpleGrid
+          templateColumns={{ base: '1fr', md: 'repeat(2, 37%)' }}
+          gap="4rem"
+        >
           {HackathonPartners.map(
+            ({ title, color, partners, columnConfig }, index) => (
+              <Flex
+                gap={{ base: '2rem', md: '2rem' }}
+                flexDir="column"
+                key={index}
+              >
+                <Heading
+                  fontSize="1.5rem"
+                  boxShadow="6px 6px 0px 0px #282826"
+                  border="2px solid #282826"
+                  display="flex"
+                  borderRadius="full"
+                  w="fit-content"
+                  bgColor={color}
+                  px="1.5rem"
+                  py="0.5rem"
+                >
+                  {title}
+                </Heading>
+                <SimpleGrid templateColumns={columnConfig} gap="1rem">
+                  {partners.map(({ link, image, bgColor }, index) => (
+                    <DropShadowBox key={index} w="full" aspectRatio="2">
+                      <Flex
+                        as={Link}
+                        href={link}
+                        target="_blank"
+                        w="full"
+                        h="full"
+                        px="1rem"
+                        flexDir="column"
+                        alignItems="center"
+                        justifyContent="center"
+                        background={bgColor}
+                      >
+                        <Image
+                          src={image}
+                          alt="sponsor"
+                          maxW="80%"
+                          maxH="50%"
+                          aspectRatio="auto"
+                        />
+                      </Flex>
+                    </DropShadowBox>
+                  ))}
+                </SimpleGrid>
+              </Flex>
+            ),
+          )}
+        </SimpleGrid>
+        <Flex flexDir="column" gap="4rem">
+          {CoommunityPartners.map(
             ({ title, color, partners, columnConfig }, index) => (
               <Flex
                 gap={{ base: '2rem', md: '2rem' }}
