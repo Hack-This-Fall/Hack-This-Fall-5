@@ -13,7 +13,7 @@ const footer = [
       },
       {
         title: 'BLOG',
-        link: 'https://blog.hackthisfall.tech/',
+        link: 'https://hackthisfall.tech/blog',
       },
       {
         title: 'COC',
