@@ -142,7 +142,7 @@ const FunPrizes = [
     description:
       '⁠Draw your own Mona in whatever medium you choose and stand a chance to win GitHub Tshirt by posting your art on X (Twitter). Make sure to tag us @githubeducation @hackthisfall and use the hashtags #MyOctocat #HackThisFallVirtual.',
     bgColor: '#FFF',
-    shadowColor: '#FF9B38',
+    shadowColor: '#000000',
   },
 ];
 

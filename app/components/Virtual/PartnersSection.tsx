@@ -51,7 +51,7 @@ const SilverAndGoldPartners = [
     color: '#CCCCCC',
     partners: [
       {
-        link: 'https://www.postman.com',
+        link: 'https://bit.ly/htf24v-postman',
         image: '/images/partners/postman.png',
         bgColor: '#F9F5F2',
       },
