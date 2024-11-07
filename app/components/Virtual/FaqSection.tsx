@@ -82,6 +82,7 @@ const FaqDetails = [
       >
         We encourage collaboration, and teams of up to 5 members are allowed. If
         you don&apos;t have a team, you can find team members through our
+        {' '}
         <Link
           color="#282826"
           href="https://discord.hackthisfall.tech/"

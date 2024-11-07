@@ -242,7 +242,7 @@ const Page = () => {
             </Heading>
           </Flex>
           <Tabs variant="unstyled" mb="4rem">
-            <TabList flexDir={{base: "column", md: "row"}} gap="1rem">
+            <TabList flexDir={{ base: 'column', md: 'row' }} gap="1rem">
               {Object.keys(HackathonSchedule).map((key) => (
                 <Tab
                   key={key}
@@ -254,7 +254,6 @@ const Page = () => {
                   color="#282826"
                   fontFamily="var(--font-roboto-condensed)"
                   fontSize="1.5rem"
-                  
                   fontWeight="600"
                   bg="transparent"
                   px="2rem"
@@ -277,7 +276,13 @@ const Page = () => {
                 </Tab>
               ))}
             </TabList>
-            <Text mt="1rem" color="#282826" fontSize="1rem" fontWeight="600" fontStyle="italic">
+            <Text
+              mt="1rem"
+              color="#282826"
+              fontSize="1rem"
+              fontWeight="600"
+              fontStyle="italic"
+            >
               * All times displayed in India Standard Time (UTC+05:30)
             </Text>
             <TabPanels mt="2rem">
@@ -303,7 +308,7 @@ const Page = () => {
                           <Heading
                             color="#808080"
                             fontWeight="600"
-                            fontSize="1.5rem"
+                            fontSize={{ base: '1rem', md: '1.5rem' }}
                           >
                             {item.title}
                           </Heading>
@@ -329,7 +334,7 @@ const Page = () => {
                               <Heading
                                 color="#808080"
                                 fontWeight="600"
-                                fontSize="1.5rem"
+                                fontSize={{ base: '1rem', md: '1.5rem' }}
                               >
                                 {item.title}
                               </Heading>
