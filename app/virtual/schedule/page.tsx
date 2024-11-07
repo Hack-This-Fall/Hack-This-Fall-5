@@ -29,6 +29,10 @@ const TabsData = [
     title: 'PRIZES',
   },
   {
+    title: 'SCHEDULE',
+    link: '/virtual/schedule',
+  },
+  {
     title: 'PARTNERS',
   },
   {
@@ -190,7 +194,7 @@ const HackathonSchedule: HackathonSchedule = {
 };
 
 const Page = () => {
-  const [currentSection, setCurrentSection] = useState('HOME');
+  const [currentSection, setCurrentSection] = useState('SCHEDULE');
 
   return (
     <>
