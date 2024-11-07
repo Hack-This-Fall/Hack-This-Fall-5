@@ -124,7 +124,7 @@ const HackathonPartners = [
       },
       {
         link: 'https://www.thecodebird.in/',
-        image: '/images/partners/hackathon/codebird.png',
+        image: '/images/partners/hackathon/cd.png',
         bgColor: '#F9F5F2',
       },
       {
