@@ -28,7 +28,7 @@ const Tabs = [
   },
   {
     title: 'SCHEDULE',
-    link: '/virtual/schedule'
+    link: '/virtual/schedule',
   },
   {
     title: 'PARTNERS',
@@ -131,16 +131,58 @@ const FunPrizes = [
   {
     logo: '/images/logo.png',
     title: 'Hack From Anywhere Challenge',
-    description:
-      'This weekend, share a photo of yourself hacking from anywhere — home, office, backyard, beach, mountaintop, or anywhere else! Tag us @hackthisfall & use #AttendingHTF and the most creative shot wins a cool GitHub Tshirt.',
+    description: (
+      <Text
+        fontFamily="var(--font-outfit)"
+        fontSize={{ base: '0.8rem', md: '1.4rem' }}
+      >
+        This weekend, share a photo of yourself hacking from anywhere — home,
+        office, backyard, beach, mountaintop, or anywhere else! Tag us
+        @hackthisfall & use #AttendingHTF and the most creative shot wins a cool
+        GitHub Tshirt.
+      </Text>
+    ),
     bgColor: '#FFF',
     shadowColor: '#FF9B38',
   },
   {
     logo: '/images/partners/github.png',
     title: "GitHub's Draw an Octocat Challenge",
-    description:
-      '⁠Draw your own Mona in whatever medium you choose and stand a chance to win GitHub Tshirt by posting your art on X (Twitter). Make sure to tag us @githubeducation @hackthisfall and use the hashtags #MyOctocat #HackThisFallVirtual.',
+    description: (
+      <Text
+        fontFamily="var(--font-outfit)"
+        fontSize={{ base: '0.8rem', md: '1.4rem' }}
+      >
+        Draw your own Mona in whatever medium you choose and stand a chance to
+        win GitHub Tshirt by posting your art on X (Twitter). Make sure to tag
+        us @githubeducation @hackthisfall and use the hashtags #MyOctocat
+        #HackThisFallVirtual.
+      </Text>
+    ),
+    bgColor: '#FFF',
+    shadowColor: '#000000',
+  },
+  {
+    logo: '/images/partners/hackathon/startup.png',
+    title: 'Giveaway by Startups Dil Se Podcast',
+    description: (
+      <Text
+        fontFamily="var(--font-outfit)"
+        fontSize={{ base: '0.8rem', md: '1.4rem' }}
+      >
+        Know a startup founder or team with an inspiring story that aligns with
+        the Hack This Fall tracks? Recommend them to be a guest on the Startups
+        Dil Se Podcast! Two lucky winners who fills out the{' '}
+        <Link
+          color="#00000066"
+          href="https://forms.gle/jotH8ntKzsoANmsA8"
+          target="_blank"
+        >
+          form
+        </Link>{' '}
+        will win 3000 INR in Cash Prizes.
+      </Text>
+    ),
     bgColor: '#FFF',
     shadowColor: '#000000',
   },
@@ -429,12 +471,7 @@ const Page = () => {
                   >
                     {prize.title}
                   </Heading>
-                  <Text
-                    fontFamily="var(--font-outfit)"
-                    fontSize={{ base: '0.8rem', md: '1.4rem' }}
-                  >
-                    {prize.description}
-                  </Text>
+                  {prize.description}
                 </Flex>
               ))}
             </SimpleGrid>
