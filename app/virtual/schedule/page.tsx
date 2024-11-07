@@ -65,12 +65,12 @@ const HackathonSchedule: HackathonSchedule = {
       endTimestamp: moment('2024-11-08T20:00'),
       platform: '/images/icons/platforms/youtube.png',
     },
-    {
-      title: 'What makes a good hackathon project [Devfolio Talk]',
-      startTimestamp: moment('2024-11-08T20:15'),
-      endTimestamp: moment('2024-11-08T20:45'),
-      platform: '/images/icons/platforms/youtube.png',
-    },
+    // {
+    //   title: 'What makes a good hackathon project [Devfolio Talk]',
+    //   startTimestamp: moment('2024-11-08T20:15'),
+    //   endTimestamp: moment('2024-11-08T20:45'),
+    //   platform: '/images/icons/platforms/youtube.png',
+    // },
     {
       title: 'Hacking Begins',
       startTimestamp: moment('2024-11-08T21:00'),
