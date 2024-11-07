@@ -14,6 +14,7 @@ import {
 import React, { useState } from 'react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import { title } from 'process';
 
 const Tabs = [
   {
@@ -66,9 +67,18 @@ const SponsoredPrizes = [
     title: 'Best Use of GitHub',
     description:
       "Stand a chance to win GitHub Mona figurine or plushy in two simple steps. Sign up for GitHub Global Campus. Use a GitHub repository to host your hackathon project 's code.",
-    link: 'https://bit.ly/htf24v-ge',
+    link: 'https://bit.ly/htf24v-github-challenge',
     bgColor: '#FFF',
     shadowColor: '#000000',
+  },
+  {
+    logo: '/images/partners/peerlist.png',
+    title: 'Peerlist Project Spotlight',
+    description:
+      'Showcase your project on Peerlist to win top recognition, valuable exposure, and a special achievement badge for credibility.',
+    link: 'https://bit.ly/htf24v-github-challenge',
+    bgColor: '#FFF',
+    shadowColor: '#00AA45',
   },
   {
     logo: '/images/partners/streamlit.png',
@@ -105,6 +115,25 @@ const SponsoredPrizes = [
     link: 'https://hack.mlh.io/hack-this-fall-2024/prizes',
     bgColor: '#FFF',
     shadowColor: '#000000',
+  },
+];
+
+const FunPrizes = [
+  {
+    logo: '/images/logo.png',
+    title: 'Hack From Anywhere Challenge',
+    description:
+      'This weekend, share a photo of yourself hacking from anywhere — home, office, backyard, beach, mountaintop, or anywhere else! Tag us @hackthisfall & use #AttendingHTF and the most creative shot wins a cool GitHub Tshirt.',
+    bgColor: '#FFF',
+    shadowColor: '#FF9B38',
+  },
+  {
+    logo: '/images/logo.png',
+    title: "GitHub's Draw an Octocat Challenge",
+    description:
+      '⁠Draw your own Mona in whatever medium you choose and stand a chance to win GitHub Tshirt by posting your art on X (Twitter). Make sure to tag us @githubeducation @hackthisfall and use the hashtags #MyOctocat #HackThisFallVirtual.',
+    bgColor: '#FFF',
+    shadowColor: '#FF9B38',
   },
 ];
 
@@ -309,6 +338,71 @@ const Page = () => {
                   href={prize.link}
                   justifyContent="space-between"
                   target="_blank"
+                  gap="1.5rem"
+                  key={index}
+                  flexDir="column"
+                  p="1.5rem"
+                  borderRadius="1rem"
+                  bgColor={prize.bgColor}
+                  border={`1px solid ${prize.shadowColor}`}
+                  boxShadow={`3px 3px 0px 0px ${prize.shadowColor}`}
+                >
+                  <Image src={prize.logo} alt="Prize" w="40%" />
+                  <Heading
+                    fontFamily="var(--font-outfit)"
+                    fontSize={{ base: '1rem', md: '1.8rem' }}
+                    fontWeight="800"
+                  >
+                    {prize.title}
+                  </Heading>
+                  <Text
+                    fontFamily="var(--font-outfit)"
+                    fontSize={{ base: '0.8rem', md: '1.4rem' }}
+                  >
+                    {prize.description}
+                  </Text>
+                </Flex>
+              ))}
+            </SimpleGrid>
+          </Flex>
+          <Flex pt="7rem" w="full" flexDir="column">
+            <Flex
+              justifyContent={{ base: 'center', md: 'flex-start' }}
+              alignItems="center"
+              gap="1rem"
+              maxW="100%"
+            >
+              <Image
+                h={{ base: '2.8rem', md: '5rem', '2xl': '6rem' }}
+                src="/images/icons/backGreenArrows.svg"
+                alt="Orange Ball"
+              />
+              <Image
+                h={{ base: '2.8rem', md: '5rem', '2xl': '6rem' }}
+                src="/images/icons/yellowBall.svg"
+                alt="Green Pill"
+              />
+              <Heading
+                color="#282826"
+                fontFamily="var(--font-roboto-condensed)"
+                fontSize={{ base: '2.8rem', md: '5rem', '2xl': '6rem' }}
+                fontWeight="600"
+              >
+                FUN PRIZES
+              </Heading>
+            </Flex>
+            <SimpleGrid
+              templateColumns={{
+                base: '1fr',
+                md: 'repeat(2, 1fr)',
+                lg: 'repeat(3, 1fr)',
+              }}
+              gap="1rem"
+              pt="3rem"
+            >
+              {FunPrizes.map((prize, index) => (
+                <Flex
+                  justifyContent="space-between"
                   gap="1.5rem"
                   key={index}
                   flexDir="column"

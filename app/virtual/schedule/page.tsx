@@ -60,8 +60,7 @@ const HackathonSchedule: HackathonSchedule = {
       platform: '/images/icons/platforms/youtube.png',
     },
     {
-      title:
-        'Elevate Your Hackathon Game with GitHub Copilot [GitHub Workshop]',
+      title: 'Making Better Hacks, Faster with GitHub Copilot [Workshop]',
       startTimestamp: moment('2024-11-08T19:15'),
       endTimestamp: moment('2024-11-08T20:00'),
       platform: '/images/icons/platforms/youtube.png',

@@ -10,6 +10,7 @@ import FaqSection from '../components/Virtual/FaqSection';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import PrizesSection from '../components/Virtual/PrizesSection';
+import HumansSection from '../components/Virtual/HumansSection';
 
 const Tabs = [
   {
@@ -79,6 +80,15 @@ const Page = () => {
           onChange={(inView, entry) => inView && setCurrentSection('PRIZES')}
         >
           <PrizesSection pt="7rem" pb="0" />
+        </InView>
+        <InView
+          style={{ width: '100%' }}
+          id="PRIZES"
+          as="div"
+          threshold={0.7}
+          onChange={(inView, entry) => inView && setCurrentSection('HUMANS')}
+        >
+          <HumansSection />
         </InView>
         <InView
           style={{ width: '100%' }}
