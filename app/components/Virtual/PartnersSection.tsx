@@ -67,6 +67,23 @@ const SilverAndGoldPartners = [
 
 const HackathonPartners = [
   {
+    title: 'KNOWLEDGE',
+    color: '#7FBC8C',
+    partners: [
+      {
+        link: 'https://mlh.io',
+        image: '/images/partners/google.png',
+        bgColor: '#F9F5F2',
+      },
+    ],
+    columnConfig: {
+      base: 'repeat(2, 13rem)',
+      md: 'repeat(2, 15rem)',
+      lg: 'repeat(3, 20rem)',
+      '2xl': 'repeat(3, 25rem)',
+    },
+  },
+  {
     title: 'HACKATHON',
     color: '#7FBC8C',
     partners: [

@@ -10,6 +10,11 @@ const HumanDetails = [
     link: 'https://www.linkedin.com/in/akashjaiswal03/',
   },
   {
+    name: 'Anubhav Singh',
+    image: '/images/mentors/anubhav.png',
+    link: 'https://www.linkedin.com/in/xprilion/',
+  },
+  {
     name: 'Anurag Mishra',
     image: '/images/mentors/anurag.jpg',
     link: 'https://linkedin.com/in/anuragayumishra',
@@ -156,7 +161,7 @@ const HumanDetails = [
   },
   {
     name: 'Aniket Raj',
-    image: '/images/mentors/aniket.jpeg',
+    image: '/images/mentors/aniket.png',
     link: 'https://www.linkedin.com/in/aniketraj1/',
   },
 ];

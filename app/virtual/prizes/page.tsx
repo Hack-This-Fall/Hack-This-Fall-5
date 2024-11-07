@@ -72,6 +72,15 @@ const SponsoredPrizes = [
     shadowColor: '#000000',
   },
   {
+    logo: '/images/partners/google.png',
+    title: 'Best Project built using Gemini API',
+    description:
+      'Put your skills to the test by building something amazing with the Gemini API! Compete to win Exclusive Goodies from Google for Developers for your innovative use of Gemini’s powerful tools.',
+    link: 'https://bit.ly/htf24v-gfd-challenge',
+    bgColor: '#FFF',
+    shadowColor: '#000000',
+  },
+  {
     logo: '/images/partners/peerlist.png',
     title: 'Peerlist Project Spotlight',
     description:

@@ -103,12 +103,18 @@ const HackathonSchedule: HackathonSchedule = {
       endTimestamp: moment('2024-11-09T03:30'),
       platform: '/images/icons/platforms/twitch.png',
     },
-    // {
-    //   title: 'Talk Slot',
-    //   startTimestamp: moment('2024-11-09T10:00'),
-    //   endTimestamp: moment('2024-11-09T10:45'),
-    //   platform: '/images/icons/platforms/youtube.png',
-    // },
+    {
+      title: 'Build AI apps using Gemini [Workshop]',
+      startTimestamp: moment('2024-11-09T10:00'),
+      endTimestamp: moment('2024-11-09T10:30'),
+      platform: '/images/icons/platforms/youtube.png',
+    },
+    {
+      title: 'What makes a good hackathon project [Devfolio Talk]',
+      startTimestamp: moment('2024-11-09T11:00'),
+      endTimestamp: moment('2024-11-09T11:30'),
+      platform: '/images/icons/platforms/youtube.png',
+    },
     {
       title: 'Submission Checkpoint - 2/5',
       startTimestamp: moment('2024-11-09T11:00'),
