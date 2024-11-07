@@ -80,7 +80,7 @@ const PrizesSection = ({
         w="full"
         justifyContent="center"
         flexWrap="wrap"
-        columnGap={{ base: '2rem', md: '4rem' }}
+        columnGap={{ base: '1.5rem', md: '4rem' }}
         rowGap={{ base: '4rem', md: '6rem' }}
       >
         {Prizes.map((prize, index) => (
@@ -127,7 +127,7 @@ const PrizesSection = ({
           as={Link}
           href="/virtual/prizes"
           pos="relative"
-          w={{ base: '40%', xl: '25%' }}
+          w={{ base: '45%', xl: '25%' }}
           _hover={{
             cursor: 'pointer',
             '#arrow': {
@@ -171,19 +171,22 @@ const PrizesSection = ({
           </Flex>
           <Flex
             pos="absolute"
-            top="25px"
-            right="-10px"
+            top={{ base: '20px', lg: '40px', md: '25px' }}
+            right={{ base: '-10px', lg: '0', xl: '-20px' }}
             transform="translate(-50%, -50%)"
-            p="0.5rem"
+            p={{ base: '0.2rem', md: '0.5rem' }}
             borderRadius="full"
             border="1px solid #282826"
-            boxShadow="2.5px 2.5px 0px 0px #282826"
+            boxShadow={{
+              base: '1.5px 1.5px 0px 0px #282826',
+              md: '2.5px 2.5px 0px 0px #282826',
+            }}
             bgColor="#F9F5F2"
           >
             <ArrowForwardIcon
               id="arrow"
               transform="rotate(-45deg)"
-              fontSize="1.5rem"
+              fontSize={{ base: '0.8rem', md: '1.5rem' }}
               color="#282826"
             />
           </Flex>
