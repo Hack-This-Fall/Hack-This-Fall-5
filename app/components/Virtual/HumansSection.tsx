@@ -79,19 +79,19 @@ const HumansSection = () => {
         maxW="100%"
       >
         <Image
-          h={{ base: '3rem', md: '5rem', '2xl': '6rem' }}
+          h={{ base: '2.8rem', md: '5rem', '2xl': '6rem' }}
           src="/images/icons/orangeBall.svg"
           alt="Orange Ball"
         />
         <Image
-          h={{ base: '3rem', md: '5rem', '2xl': '6rem' }}
+          h={{ base: '2.8rem', md: '5rem', '2xl': '6rem' }}
           src="/images/icons/greenPill.svg"
           alt="Green Pill"
         />
         <Heading
           color="#282826"
           fontFamily="var(--font-roboto-condensed)"
-          fontSize={{ base: '3rem', md: '5rem', '2xl': '6rem' }}
+          fontSize={{ base: '2.8rem', md: '5rem', '2xl': '6rem' }}
           fontWeight="600"
         >
           PREVIOUS HUMANS

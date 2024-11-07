@@ -134,9 +134,9 @@ const HackathonPartners = [
       },
     ],
     columnConfig: {
-      base: 'repeat(2, 13rem)',
-      md: 'repeat(2, 15rem)',
-      lg: 'repeat(3, 20rem)',
+      base: 'repeat(2, 1fr)',
+      md: 'repeat(3, 1fr)',
+      lg: 'repeat(4, 1fr)',
       '2xl': 'repeat(5, 1fr)',
     },
   },
@@ -159,19 +159,19 @@ const PartnersSection = () => {
         maxW="100%"
       >
         <Image
-          h={{ base: '3rem', md: '5rem', '2xl': '6rem' }}
+          h={{ base: '2.8rem', md: '5rem', '2xl': '6rem' }}
           src="/images/icons/purplePill.svg"
           alt="Purple Pill"
         />
         <Image
-          h={{ base: '3rem', md: '5rem', '2xl': '6rem' }}
+          h={{ base: '2.8rem', md: '5rem', '2xl': '6rem' }}
           src="/images/icons/orangeStar.svg"
           alt="Orange Star"
         />
         <Heading
           color="#282826"
           fontFamily="var(--font-roboto-condensed)"
-          fontSize={{ base: '3rem', md: '5rem', '2xl': '6rem' }}
+          fontSize={{ base: '2.8rem', md: '5rem', '2xl': '6rem' }}
           fontWeight="600"
         >
           PARTNERS
