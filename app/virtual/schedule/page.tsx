@@ -45,6 +45,7 @@ interface ScheduleItem {
   startTimestamp: moment.Moment;
   endTimestamp: moment.Moment;
   platform: string;
+  link?: string;
 }
 
 interface HackathonSchedule {
@@ -58,12 +59,14 @@ const HackathonSchedule: HackathonSchedule = {
       startTimestamp: moment('2024-11-08T18:00'),
       endTimestamp: moment('2024-11-08T19:00'),
       platform: '/images/icons/platforms/youtube.png',
+      link: 'https://www.youtube.com/watch?v=ekUSTC5tldw',
     },
     {
       title: 'Making Better Hacks, Faster with GitHub Copilot [Workshop]',
       startTimestamp: moment('2024-11-08T19:15'),
       endTimestamp: moment('2024-11-08T20:00'),
       platform: '/images/icons/platforms/youtube.png',
+      link: 'https://www.youtube.com/watch?v=6EEq12SoaVQ',
     },
     // {
     //   title: 'What makes a good hackathon project [Devfolio Talk]',
@@ -108,12 +111,14 @@ const HackathonSchedule: HackathonSchedule = {
       startTimestamp: moment('2024-11-09T10:00'),
       endTimestamp: moment('2024-11-09T10:30'),
       platform: '/images/icons/platforms/youtube.png',
+      link: 'https://www.youtube.com/watch?v=3lW_ASFw2Q4',
     },
     {
       title: 'What makes a good hackathon project [Devfolio Talk]',
       startTimestamp: moment('2024-11-09T11:00'),
       endTimestamp: moment('2024-11-09T11:30'),
       platform: '/images/icons/platforms/youtube.png',
+      link: 'https://www.youtube.com/watch?v=k-oLyjYP9es',
     },
     {
       title: 'Submission Checkpoint - 2/5',
@@ -176,6 +181,7 @@ const HackathonSchedule: HackathonSchedule = {
       startTimestamp: moment('2024-11-10T10:00'),
       endTimestamp: moment('2024-11-10T11:00'),
       platform: '/images/icons/platforms/youtube.png',
+      link: 'https://www.youtube.com/watch?v=avMV3BpGQSk',
     },
     {
       title: 'Hackathon & Partner Judging',
@@ -188,6 +194,7 @@ const HackathonSchedule: HackathonSchedule = {
       startTimestamp: moment('2024-11-10T17:00'),
       endTimestamp: moment('2024-11-10T17:30'),
       platform: '/images/icons/platforms/youtube.png',
+      link: 'https://www.youtube.com/watch?v=OjXUSwD_sao',
     },
     {
       title: 'Special Announcement',
@@ -328,6 +335,7 @@ const Page = () => {
                           bgColor="#FFF"
                           w="full"
                           key={item.title}
+                          link={item.link}
                         >
                           <Flex
                             justifyContent="space-between"
