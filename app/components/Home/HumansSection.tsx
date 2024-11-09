@@ -36,9 +36,9 @@ const HumanDetails = [
     link: 'https://twitter.com/eddiejaoude',
   },
   {
-    name: 'Karl',
-    image: '/images/humans/karl.png',
-    link: 'https://twitter.com/KarlLingiah',
+    name: 'Anubhav Singh',
+    image: '/images/mentors/anubhav.png',
+    link: 'https://www.linkedin.com/in/xprilion/',
   },
   {
     name: 'Khushboo',

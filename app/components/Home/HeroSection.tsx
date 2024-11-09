@@ -123,7 +123,7 @@ const HeroSection = () => {
           gap={{ base: '1rem', xl: '1.5rem' }}
           w={{ base: 'full', xl: 'auto' }}
         >
-          {/* <Button
+          <Button
             as={Link}
             href="https://discord.hackthisfall.tech"
             target="_blank"
@@ -146,30 +146,26 @@ const HeroSection = () => {
             }}
           >
             Join Discord
-          </Button> */}
+          </Button>
           <Button
-            as={Link}
-            href="https://discord.hackthisfall.tech"
-            target="_blank"
             color="#fff"
             fontFamily="var(--font-roboto-condensed)"
             fontSize="1.5rem"
             fontWeight="600"
-            bg="#746BEB"
+            bg="#746beb93"
             px="2.5rem"
             py="2rem"
             w={{ base: 'full', xl: 'auto' }}
             borderRadius="full"
-            border="2px solid #282826"
+            // border="2px solid #282826"
             boxShadow="2.95px 2.95px 0px 0px #000000"
             _hover={{
-              bg: '#746BEB',
-              boxShadow: '1px 1px 0px 0px #282826',
-              transform: 'translate(1.95px, 1.95px)',
+              bg: '#746beb93',
+              cursor: 'not-allowed',
               textDecoration: 'none',
             }}
           >
-            Join Discord <ArrowForwardIcon ml="0.5rem" />
+            Regsiter Soon <ArrowForwardIcon ml="0.5rem" />
           </Button>
         </Flex>
       </Flex>

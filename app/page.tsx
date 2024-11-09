@@ -15,9 +15,6 @@ const Tabs = [
     title: 'HOME',
   },
   {
-    title: 'TRACKS',
-  },
-  {
     title: 'HUMANS',
   },
   {
@@ -52,15 +49,6 @@ const Page = () => {
           onChange={(inView, entry) => inView && setCurrentSection('HOME')}
         >
           <HeroSection />
-        </InView>
-        <InView
-          style={{ width: '100%' }}
-          id="TRACKS"
-          as="div"
-          threshold={0.7}
-          onChange={(inView, entry) => inView && setCurrentSection('TRACKS')}
-        >
-          <TracksSection />
         </InView>
         <InView
           style={{ width: '100%' }}

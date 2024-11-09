@@ -10,6 +10,16 @@ const PartnerDetails = [
     bgColor: '#F9F5F2',
   },
   {
+    link: 'https://auth0.com',
+    image: '/images/partners/auth0.png',
+    bgColor: '#F9F5F2',
+  },
+  {
+    link: 'https://www.databricks.com',
+    image: '/images/partners/databricks.png',
+    bgColor: '#F9F5F2',
+  },
+  {
     link: 'https://devfolio.co',
     image: '/images/partners/devfolio.png',
     bgColor: '#F9F5F2',
@@ -20,8 +30,18 @@ const PartnerDetails = [
     bgColor: '#F9F5F2',
   },
   {
+    link: 'https://developers.google.com',
+    image: '/images/partners/google.png',
+    bgColor: '#F9F5F2',
+  },
+  {
     link: 'https://devlibrary.withgoogle.com',
     image: '/images/partners/googleDev.png',
+    bgColor: '#F9F5F2',
+  },
+  {
+    link: 'https://www.logitech.com',
+    image: '/images/partners/logitech.png',
     bgColor: '#F9F5F2',
   },
   {
@@ -87,6 +107,11 @@ const PartnerDetails = [
   {
     link: 'https://www.storyblok.com',
     image: '/images/partners/storyblok.png',
+    bgColor: '#F9F5F2',
+  },
+  {
+    link: 'https://streamlit.io',
+    image: '/images/partners/streamlit.png',
     bgColor: '#F9F5F2',
   },
   {
@@ -164,7 +189,13 @@ const PreviousPartnersSection = () => {
               justifyContent="center"
               background={bgColor}
             >
-              <Image src={image} alt="sponsor" maxH="50%" aspectRatio="auto" />
+              <Image
+                src={image}
+                alt="sponsor"
+                maxW="80%"
+                maxH="50%"
+                aspectRatio="auto"
+              />
             </Flex>
           </DropShadowBox>
         ))}
