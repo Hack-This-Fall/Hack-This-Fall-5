@@ -101,7 +101,7 @@ const HeroSection = () => {
             mb={{ base: '4rem', xl: '0' }}
             mt={{ base: '2rem', xl: '0' }}
           >
-            2025 In-Person Hackathon <br /> Applications Open Soon
+            2025 In-Person Hackathon <br /> 21 - 23 March, 2025
           </Text>
         ) : (
           <Text
@@ -115,7 +115,7 @@ const HeroSection = () => {
             mb={{ base: '4rem', xl: '0' }}
             mt={{ base: '2rem', xl: '0' }}
           >
-            2025 In-Person Hackathon • Applications Open Soon
+            2025 In-Person Hackathon • 21 - 23 March, 2025
           </Text>
         )}
         <Flex
@@ -165,7 +165,7 @@ const HeroSection = () => {
               textDecoration: 'none',
             }}
           >
-            Regsiter Soon <ArrowForwardIcon ml="0.5rem" />
+            Register Soon <ArrowForwardIcon ml="0.5rem" />
           </Button>
         </Flex>
       </Flex>
