@@ -61,7 +61,7 @@ const HumansSection = () => {
     <Flex
       background="#F9F5F2"
       w="full"
-      className="container-1200-full"
+      className="container-1440-full"
       px={{ base: '1rem', md: '2rem', '2xl': '0' }}
       flexDir="column"
       gap="3rem"
