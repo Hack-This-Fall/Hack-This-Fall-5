@@ -7,8 +7,8 @@ import { InView } from 'react-intersection-observer';
 import HumansSection from './components/Home/HumansSection';
 import TracksSection from './components/Home/TracksSection';
 import PreviousPartnersSection from './components/Home/PreviousPartnersSection';
-import Header from './components/Header';
-import Footer from './components/Footer';
+import Header from './components/Home/Header';
+import Footer from './components/Home/Footer';
 
 const Tabs = [
   {
@@ -38,7 +38,6 @@ const Page = () => {
         overflowX="hidden"
         minH="100dvh"
         flexDir="column"
-        pt="8rem"
         pb="8rem"
       >
         <InView

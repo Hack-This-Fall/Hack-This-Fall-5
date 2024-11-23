@@ -1,174 +1,83 @@
 'use client';
 
-import { ArrowForwardIcon } from '@chakra-ui/icons';
-import {
-  Button,
-  Flex,
-  Heading,
-  Image,
-  Link,
-  Text,
-  useBreakpointValue,
-} from '@chakra-ui/react';
+import { Flex, Image, Link, useBreakpointValue } from '@chakra-ui/react';
 
 const HeroSection = () => {
   const isMobile = useBreakpointValue({ base: true, md: false });
-
   return (
     <Flex
       background="#F9F5F2"
       w="full"
-      className="container-1200"
+      className="container-1440-full"
       justifyContent="center"
+      position="relative"
       alignItems="center"
       flexDir="column"
     >
       {!isMobile ? (
         <>
-          <Flex
-            w="full"
-            justifyContent="center"
-            gap="2rem"
-            alignItems="center"
-            mb="2rem"
-          >
-            <Heading
-              color="#282826"
-              fontFamily="var(--font-roboto-condensed)"
-              fontSize={{ md: '6rem', lg: '7rem', xl: '8rem', '2xl': '10rem' }}
-              fontWeight="600"
-            >
-              INNOVATE
-            </Heading>
-            <Image
-              h={{ md: '5rem', lg: '6rem', xl: '7rem', '2xl': '9rem' }}
-              src="/images/icons/star.svg"
-              alt="Star"
-            />
-            <Image
-              h={{ md: '5rem', lg: '6rem', xl: '7rem', '2xl': '9rem' }}
-              src="/images/icons/pill.svg"
-              alt="Pill"
-            />
-          </Flex>
-          <Flex
-            w="full"
-            justifyContent="center"
-            gap="2rem"
-            alignItems="center"
-            mb="5rem"
-          >
-            <Image
-              h={{ md: '5rem', lg: '6rem', xl: '7rem', '2xl': '9rem' }}
-              src="/images/icons/yellowPill.svg"
-              alt="Yellow Pill"
-            />
-            <Image
-              h={{ md: '5rem', lg: '6rem', xl: '7rem', '2xl': '9rem' }}
-              src="/images/icons/arrows.svg"
-              alt="Arrows"
-            />
-            <Heading
-              color="#282826"
-              fontFamily="var(--font-roboto-condensed)"
-              fontSize={{ md: '6rem', lg: '7rem', xl: '8rem', '2xl': '10rem' }}
-              fontWeight="600"
-            >
-              FOR GOOD
-            </Heading>
-          </Flex>
+          <Image src={'/images/hero/base.svg'} alt="Hero" w="full" />
+          <Image
+            position="absolute"
+            src="/images/hero/heading.svg"
+            left={{ md: '2rem', '2xl': '7.5rem' }}
+            w="50%"
+            alt="Hero"
+          />
+          <Link
+            pos="absolute"
+            bottom="5%"
+            right="8%"
+            w={{ md: '150px', lg: '200px', '2xl': '275px' }}
+            aspectRatio="1"
+            borderRadius="full"
+            href="https://hackthisfall.devfolio.co/"
+            target="_blank"
+          />
+          <Link
+            pos="absolute"
+            bottom="41%"
+            right="8%"
+            w={{ md: '70px', lg: '90px', '2xl': '120px' }}
+            aspectRatio="1"
+            borderRadius="full"
+            href="https://discord.hackthisfall.tech/"
+            target="_blank"
+          />
         </>
       ) : (
         <>
-          <Image src="/images/Hero.svg" alt="Hero" w="90%" mb="2rem" />
+          <Image src={'/images/hero/base-mobile.svg'} alt="Hero" w="full" />
+          <Image
+            position="absolute"
+            src="/images/hero/heading-mobile.svg"
+            top="20%"
+            left={{ base: '30px' }}
+            w="75%"
+            alt="Hero"
+          />
+          <Link
+            pos="absolute"
+            bottom="13%"
+            right="8%"
+            w={{ base: '180px' }}
+            aspectRatio="1"
+            borderRadius="full"
+            href="https://hackthisfall.devfolio.co/"
+            target="_blank"
+          />
+          <Link
+            pos="absolute"
+            bottom="29%"
+            left="8%"
+            w={{ base: '110px' }}
+            aspectRatio="1"
+            borderRadius="full"
+            href="https://discord.hackthisfall.tech/"
+            target="_blank"
+          />
         </>
       )}
-      <Flex
-        flexDir={{ base: 'column', xl: 'row' }}
-        w="full"
-        justifyContent="space-between"
-        alignItems="center"
-      >
-        {isMobile ? (
-          <Text
-            color="#282826"
-            fontFamily="var(--font-roboto-condensed)"
-            fontSize={{ base: '1.5rem', xl: '2rem' }}
-            textAlign={{ base: 'center', xl: 'left' }}
-            fontWeight="600"
-            fontStyle="italic"
-            textTransform="uppercase"
-            mb={{ base: '4rem', xl: '0' }}
-            mt={{ base: '2rem', xl: '0' }}
-          >
-            2025 In-Person Hackathon <br /> 21 - 23 March, 2025
-          </Text>
-        ) : (
-          <Text
-            color="#282826"
-            fontFamily="var(--font-roboto-condensed)"
-            fontSize={{ base: '1.5rem', xl: '1.7rem' }}
-            textAlign={{ base: 'center', xl: 'left' }}
-            fontWeight="600"
-            fontStyle="italic"
-            textTransform="uppercase"
-            mb={{ base: '4rem', xl: '0' }}
-            mt={{ base: '2rem', xl: '0' }}
-          >
-            2025 In-Person Hackathon • 21 - 23 March, 2025
-          </Text>
-        )}
-        <Flex
-          flexDir={{ base: 'column', md: 'row' }}
-          gap={{ base: '1rem', xl: '1.5rem' }}
-          w={{ base: 'full', xl: 'auto' }}
-        >
-          <Button
-            as={Link}
-            href="https://discord.hackthisfall.tech"
-            target="_blank"
-            color="#282826"
-            fontFamily="var(--font-roboto-condensed)"
-            fontSize="1.5rem"
-            fontWeight="600"
-            bg="transparent"
-            w={{ base: 'full', xl: 'auto' }}
-            px="2.5rem"
-            py="2rem"
-            borderRadius="full"
-            border="2px solid #282826"
-            boxShadow="2.95px 2.95px 0px 0px #000000"
-            _hover={{
-              bg: 'transparent',
-              boxShadow: '1px 1px 0px 0px #282826',
-              transform: 'translate(1.95px, 1.95px)',
-              textDecoration: 'none',
-            }}
-          >
-            Join Discord
-          </Button>
-          <Button
-            color="#fff"
-            fontFamily="var(--font-roboto-condensed)"
-            fontSize="1.5rem"
-            fontWeight="600"
-            bg="#746beb93"
-            px="2.5rem"
-            py="2rem"
-            w={{ base: 'full', xl: 'auto' }}
-            borderRadius="full"
-            // border="2px solid #282826"
-            boxShadow="2.95px 2.95px 0px 0px #000000"
-            _hover={{
-              bg: '#746beb93',
-              cursor: 'not-allowed',
-              textDecoration: 'none',
-            }}
-          >
-            Register Soon <ArrowForwardIcon ml="0.5rem" />
-          </Button>
-        </Flex>
-      </Flex>
     </Flex>
   );
 };

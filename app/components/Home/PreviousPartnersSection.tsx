@@ -136,70 +136,102 @@ const PreviousPartnersSection = () => {
     <Flex
       background="#F9F5F2"
       w="full"
-      className="container-1200"
+      className="container-1440-full"
+      px={{ base: '1rem', md: '2rem', '2xl': '0' }}
       flexDir="column"
       gap="3rem"
-      py="7rem"
+      pt="10rem"
+      pb="7rem"
     >
       <Flex
-        justifyContent={{ base: 'center', md: 'flex-start' }}
-        alignItems="center"
-        gap="1rem"
-        maxW="100%"
+        pos="relative"
+        w="full"
+        px={{ base: '1rem', md: '2rem' }}
+        pb={{ base: '1rem', md: '2rem' }}
+        pt={{ base: '4rem', md: '6rem' }}
+        border="2px solid #282826"
+        borderRadius="1rem"
       >
-        <Image
-          h={{ base: '2.8rem', md: '5rem', '2xl': '6rem' }}
-          src="/images/icons/purplePill.svg"
-          alt="Purple Pill"
-        />
-        <Image
-          h={{ base: '2.8rem', md: '5rem', '2xl': '6rem' }}
-          src="/images/icons/orangeStar.svg"
-          alt="Orange Star"
-        />
-        <Heading
-          color="#282826"
-          fontFamily="var(--font-roboto-condensed)"
-          fontSize={{ base: '2.8rem', md: '5rem', '2xl': '6rem' }}
-          fontWeight="600"
+        <Flex
+          p="0.6rem"
+          border="2px solid #282826"
+          w="max-content"
+          gap="1rem"
+          borderRadius="1rem"
+          bgColor="#fff"
+          pos="absolute"
+          top="0"
+          left={{ base: '1rem', md: '2rem' }}
+          transform="translate(0, -50%)"
+          justifyContent="center"
+          alignItems="center"
         >
-          PREVIOUS PARTNERS
-        </Heading>
+          <Image
+            maxH={{ base: '4rem', lg: '6.7rem' }}
+            borderRadius={{ base: '0.5rem', lg: '1.3rem' }}
+            src="/images/icons/home/arrows.svg"
+            alt="sun"
+          />
+          <Heading
+            fontFamily="var(--font-anton)"
+            fontSize={{ base: '2rem', lg: '3.3rem' }}
+            lineHeight="1.05"
+            fontWeight="400"
+            color="#282826"
+            textTransform="uppercase"
+          >
+            Previous
+            <br /> Partners
+          </Heading>
+        </Flex>
+        <Image
+          w="max-content"
+          alt="purple icon"
+          maxH={{ base: '3rem', lg: '5rem' }}
+          pos="absolute"
+          display={{ base: 'none', md: 'block' }}
+          top="0"
+          right={{ base: '1rem', md: '2rem' }}
+          transform="translate(0, -50%)"
+          justifyContent="center"
+          alignItems="center"
+          src="/images/icons/home/purple2.svg"
+        />
+        <SimpleGrid
+          templateColumns={{
+            base: 'repeat(2, 1fr)',
+            md: 'repeat(3, 1fr)',
+            lg: 'repeat(4, 1fr)',
+            '2xl': 'repeat(5, 1fr)',
+          }}
+          gap="1rem"
+        >
+          {PartnerDetails.map(({ image, link, bgColor }, index) => (
+            <DropShadowBox key={index} w="full" aspectRatio="2">
+              <Flex
+                as={Link}
+                href={link}
+                target="_blank"
+                w="full"
+                h="full"
+                px="1rem"
+                flexDir="column"
+                alignItems="center"
+                justifyContent="center"
+                background={bgColor}
+              >
+                <Image
+                  src={image}
+                  alt="sponsor"
+                  maxW="80%"
+                  maxH="50%"
+                  aspectRatio="auto"
+                />
+              </Flex>
+            </DropShadowBox>
+          ))}
+        </SimpleGrid>
       </Flex>
-      <SimpleGrid
-        templateColumns={{
-          base: 'repeat(2, 1fr)',
-          md: 'repeat(3, 1fr)',
-          lg: 'repeat(4, 1fr)',
-          '2xl': 'repeat(5, 1fr)',
-        }}
-        gap="1rem"
-      >
-        {PartnerDetails.map(({ image, link, bgColor }, index) => (
-          <DropShadowBox key={index} w="full" aspectRatio="2">
-            <Flex
-              as={Link}
-              href={link}
-              target="_blank"
-              w="full"
-              h="full"
-              px="1rem"
-              flexDir="column"
-              alignItems="center"
-              justifyContent="center"
-              background={bgColor}
-            >
-              <Image
-                src={image}
-                alt="sponsor"
-                maxW="80%"
-                maxH="50%"
-                aspectRatio="auto"
-              />
-            </Flex>
-          </DropShadowBox>
-        ))}
-      </SimpleGrid>
     </Flex>
   );
 };

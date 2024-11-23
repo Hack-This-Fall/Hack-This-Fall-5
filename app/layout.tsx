@@ -1,7 +1,7 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Analytics } from '@vercel/analytics/next';
-import { Roboto_Flex, Roboto_Condensed, Outfit } from 'next/font/google';
+import { Roboto_Flex, Roboto_Condensed, Outfit, Anton } from 'next/font/google';
 import { Providers } from './providers';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
@@ -9,6 +9,12 @@ const robotoFlex = Roboto_Flex({
   subsets: ['latin'],
   variable: '--font-roboto-flex',
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+});
+
+const anton = Anton({
+  subsets: ['latin'],
+  variable: '--font-anton',
+  weight: ['400'],
 });
 
 const robotoCondensed = Roboto_Condensed({
@@ -64,7 +70,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${robotoFlex.variable} ${robotoCondensed.variable} ${outfit.variable}`}
+        className={`${robotoFlex.variable} ${robotoCondensed.variable} ${outfit.variable} ${anton.variable}`}
       >
         <Providers>
           {children}
