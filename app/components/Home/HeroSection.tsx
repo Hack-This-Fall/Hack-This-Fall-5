@@ -31,6 +31,7 @@ const HeroSection = () => {
             w={{ md: '150px', lg: '200px', '2xl': '275px' }}
             aspectRatio="1"
             borderRadius="full"
+            href="https://hackthisfall.devfolio.co/"
             target="_blank"
           />
           <Link
@@ -62,6 +63,7 @@ const HeroSection = () => {
             w={{ base: '180px' }}
             aspectRatio="1"
             borderRadius="full"
+            href="https://hackthisfall.devfolio.co/"
             target="_blank"
           />
           <Link

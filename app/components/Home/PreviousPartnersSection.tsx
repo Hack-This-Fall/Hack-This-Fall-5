@@ -141,7 +141,6 @@ const PreviousPartnersSection = () => {
       flexDir="column"
       gap="3rem"
       pt="10rem"
-      pb="7rem"
     >
       <Flex
         pos="relative"
