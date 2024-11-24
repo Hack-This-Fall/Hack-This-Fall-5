@@ -33,6 +33,29 @@ const FaqDetails = [
     ),
   },
   {
+    question: 'What is Hack This Fall?',
+    answer: (
+      <AccordionPanel
+        fontFamily="var(--font-outfit)"
+        fontWeight="400"
+        fontSize="1.2rem"
+        color="#808080"
+      >
+        Hack This Fall is one of India&apos;s most welcoming, inclusive, and
+        thriving hacker communities. Launched in 2020, it aims to encourage new
+        hackers to build unique projects, regardless of the technology or field.
+        Learn more about Hack This Fall here:{' '}
+        <Link
+          color="#282826"
+          href="https://hackthisfall.tech/about"
+          target="_blank"
+        >
+          hackthisfall.tech/about
+        </Link>
+      </AccordionPanel>
+    ),
+  },
+  {
     question: 'I am a beginner, can I participate?',
     answer: (
       <AccordionPanel
@@ -48,6 +71,20 @@ const FaqDetails = [
     ),
   },
   {
+    question: 'Can I participate remotely?',
+    answer: (
+      <AccordionPanel
+        fontFamily="var(--font-outfit)"
+        fontWeight="400"
+        fontSize="1.2rem"
+        color="#808080"
+      >
+        No, Hack This Fall 2025 is an in-person event. All team members must
+        attend the hackathon in person.
+      </AccordionPanel>
+    ),
+  },
+  {
     question: 'Who is eligible to participate?',
     answer: (
       <AccordionPanel
@@ -59,6 +96,20 @@ const FaqDetails = [
         Hack This Fall is open to everyone, regardless of experience level. The
         community values inclusivity and diversity, so anyone interested in
         building innovative projects is welcome to join.
+      </AccordionPanel>
+    ),
+  },
+  {
+    question: 'How much does it cost to participate?',
+    answer: (
+      <AccordionPanel
+        fontFamily="var(--font-outfit)"
+        fontWeight="400"
+        fontSize="1.2rem"
+        color="#808080"
+      >
+        Nothing, participation in the Hack This Fall hackathon is absolutely
+        FREE.
       </AccordionPanel>
     ),
   },
@@ -85,6 +136,22 @@ const FaqDetails = [
       </AccordionPanel>
     ),
   },
+
+  {
+    question: 'I am below 18 years of age, can I participate in the hackathon?',
+    answer: (
+      <AccordionPanel
+        fontFamily="var(--font-outfit)"
+        fontWeight="400"
+        fontSize="1.2rem"
+        color="#808080"
+      >
+        Yes! You can participate in the hackathon, but we would need written
+        consent from your parent/guardian, and you wouldn’t be allowed to leave
+        the venue during the hackathon.
+      </AccordionPanel>
+    ),
+  },
   {
     question: 'When do the applications close?',
     answer: (
@@ -100,6 +167,21 @@ const FaqDetails = [
     ),
   },
   {
+    question: 'Are there any food arrangements?',
+    answer: (
+      <AccordionPanel
+        fontFamily="var(--font-outfit)"
+        fontWeight="400"
+        fontSize="1.2rem"
+        color="#808080"
+      >
+        Absolutely! We&apos;ve got you covered with complimentary meals, snacks,
+        and beverages throughout the hackathon to keep your energy high—all at
+        no cost to you!
+      </AccordionPanel>
+    ),
+  },
+  {
     question: 'Will you support or reimburse our travel expenses?',
     answer: (
       <AccordionPanel
@@ -110,6 +192,21 @@ const FaqDetails = [
       >
         Since Hack This Fall 2025 is a community-driven hackathon,
         unfortunately, we will not be able to support you with travel.
+      </AccordionPanel>
+    ),
+  },
+  {
+    question: 'What are the arrangements for women hackers?',
+    answer: (
+      <AccordionPanel
+        fontFamily="var(--font-outfit)"
+        fontWeight="400"
+        fontSize="1.2rem"
+        color="#808080"
+      >
+        We&apos;re committed to creating a safe and comfortable space for women
+        participants. This includes separate sleeping areas, clean washrooms,
+        hygiene & sanitary kits, etc.
       </AccordionPanel>
     ),
   },
@@ -132,102 +229,6 @@ const FaqDetails = [
           MLH&apos;s Code of Conduct
         </Link>
         ; we encourage you to read it.
-      </AccordionPanel>
-    ),
-  },
-  {
-    question: 'What is Hack This Fall?',
-    answer: (
-      <AccordionPanel
-        fontFamily="var(--font-outfit)"
-        fontWeight="400"
-        fontSize="1.2rem"
-        color="#808080"
-      >
-        Hack This Fall is one of India&apos;s most welcoming, inclusive, and
-        thriving hacker communities. Launched in 2020, it aims to encourage new
-        hackers to build unique projects, regardless of the technology or field.
-        Learn more about Hack This Fall here:{' '}
-        <Link
-          color="#282826"
-          href="https://hackthisfall.tech/about"
-          target="_blank"
-        >
-          hackthisfall.tech/about
-        </Link>
-      </AccordionPanel>
-    ),
-  },
-  {
-    question: 'Can I participate remotely?',
-    answer: (
-      <AccordionPanel
-        fontFamily="var(--font-outfit)"
-        fontWeight="400"
-        fontSize="1.2rem"
-        color="#808080"
-      >
-        No, Hack This Fall 2025 is an in-person event. All team members must
-        attend the hackathon in person.
-      </AccordionPanel>
-    ),
-  },
-  {
-    question: 'How much does it cost to participate?',
-    answer: (
-      <AccordionPanel
-        fontFamily="var(--font-outfit)"
-        fontWeight="400"
-        fontSize="1.2rem"
-        color="#808080"
-      >
-        Nothing, participation in the Hack This Fall hackathon is absolutely
-        FREE.
-      </AccordionPanel>
-    ),
-  },
-  {
-    question: 'I am below 18 years of age, can I participate in the hackathon?',
-    answer: (
-      <AccordionPanel
-        fontFamily="var(--font-outfit)"
-        fontWeight="400"
-        fontSize="1.2rem"
-        color="#808080"
-      >
-        Yes! You can participate in the hackathon, but we would need written
-        consent from your parent/guardian, and you wouldn’t be allowed to leave
-        the venue during the hackathon.
-      </AccordionPanel>
-    ),
-  },
-  {
-    question: 'Are there any food arrangements?',
-    answer: (
-      <AccordionPanel
-        fontFamily="var(--font-outfit)"
-        fontWeight="400"
-        fontSize="1.2rem"
-        color="#808080"
-      >
-        Absolutely! We&apos;ve got you covered with complimentary meals, snacks,
-        and beverages throughout the hackathon to keep your energy high—all at
-        no cost to you!
-      </AccordionPanel>
-    ),
-  },
-  {
-    question: 'What are the arrangements for women hackers?',
-    answer: (
-      <AccordionPanel
-        fontFamily="var(--font-outfit)"
-        fontWeight="400"
-        fontSize="1.2rem"
-        color="#808080"
-      >
-        We&apos;re committed to creating a safe and comfortable space for women
-        participants. This includes separate sleeping areas, clean washrooms,
-        hygiene & sanitary kits, etc.
       </AccordionPanel>
     ),
   },
