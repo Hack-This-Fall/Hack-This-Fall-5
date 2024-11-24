@@ -108,8 +108,9 @@ const Header = ({
         alignItems="center"
         justifyContent="space-between"
         borderY="2px solid #282826"
-        className="container-1200"
-        mt={{base: "1rem", xl: "2rem"}}
+        className={hasScrolled ? 'container-1440' : 'container-1200'}
+        transition="max-width 0.6s ease"
+        mt={{ base: '1rem', xl: '2rem' }}
         position="relative"
       >
         <Flex

@@ -9,6 +9,7 @@ import TracksSection from './components/Home/TracksSection';
 import PreviousPartnersSection from './components/Home/PreviousPartnersSection';
 import Header from './components/Home/Header';
 import Footer from './components/Home/Footer';
+import FaqSection from './components/Home/FaqSection';
 
 const Tabs = [
   {
@@ -19,6 +20,9 @@ const Tabs = [
   },
   {
     title: 'PARTNERS',
+  },
+  {
+    title: 'FAQ',
   },
 ];
 
@@ -66,6 +70,15 @@ const Page = () => {
           onChange={(inView, entry) => inView && setCurrentSection('PARTNERS')}
         >
           <PreviousPartnersSection />
+        </InView>
+        <InView
+          style={{ width: '100%' }}
+          id="FAQ"
+          as="div"
+          threshold={0.7}
+          onChange={(inView, entry) => inView && setCurrentSection('FAQ')}
+        >
+          <FaqSection />
         </InView>
         <Footer />
       </Flex>
