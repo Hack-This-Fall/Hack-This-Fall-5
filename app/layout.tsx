@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     siteName: 'Hack This Fall In-Person Hackathon 2025',
     images: [
       {
-        url: 'https://hackathon.hackthisfall.tech/banner.png',
+        url: 'https://hackathon.hackthisfall.tech/banner-new.png',
         width: 2000,
         height: 1000,
         alt: 'Hack This Fall In-Person Hackathon 2025',
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
       "Join us at our in-person hackathon and be part of this epic experience. Whether you're already part of our community or new to the scene, we welcome you with open arms! 🗓️ 21 - 23 March 2025.",
     images: [
       {
-        url: 'https://hackathon.hackthisfall.tech/banner.png',
+        url: 'https://hackathon.hackthisfall.tech/banner-new.png',
         width: 2000,
         height: 1000,
         alt: 'Hack This Fall In-Person Hackathon 2025',
