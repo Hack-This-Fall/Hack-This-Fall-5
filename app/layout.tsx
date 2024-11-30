@@ -30,25 +30,25 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: 'Hack This Fall In-Person Hackathon 2025',
+  title: 'Hack This Fall Hackathon | In-person',
   description:
     "Join us at our in-person hackathon and be part of this epic experience. Whether you're already part of our community or new to the scene, we welcome you with open arms! 🗓️ 21 - 23 March 2025.",
   openGraph: {
-    title: 'Hack This Fall In-Person Hackathon 2025',
+    title: 'Hack This Fall Hackathon | In-person',
     description:
       "Join us at our in-person hackathon and be part of this epic experience. Whether you're already part of our community or new to the scene, we welcome you with open arms! 🗓️ 21 - 23 March 2025.",
-    siteName: 'Hack This Fall In-Person Hackathon 2025',
+    siteName: 'Hack This Fall Hackathon | In-person',
     images: [
       {
         url: 'https://hackathon.hackthisfall.tech/banner-new.png',
         width: 2000,
         height: 1000,
-        alt: 'Hack This Fall In-Person Hackathon 2025',
+        alt: 'Hack This Fall Hackathon | In-person',
       },
     ],
   },
   twitter: {
-    title: 'Hack This Fall In-Person Hackathon 2025',
+    title: 'Hack This Fall Hackathon | In-person',
     description:
       "Join us at our in-person hackathon and be part of this epic experience. Whether you're already part of our community or new to the scene, we welcome you with open arms! 🗓️ 21 - 23 March 2025.",
     images: [
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
         url: 'https://hackathon.hackthisfall.tech/banner-new.png',
         width: 2000,
         height: 1000,
-        alt: 'Hack This Fall In-Person Hackathon 2025',
+        alt: 'Hack This Fall Hackathon | In-person',
       },
     ],
   },
