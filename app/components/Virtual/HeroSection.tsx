@@ -163,7 +163,7 @@ const HeroSection = () => {
               transform: 'translate(1.95px, 1.95px)',
             }}
           >
-            Pre-register <ArrowForwardIcon ml="0.5rem" />
+            Pre Register <ArrowForwardIcon ml="0.5rem" />
           </Button>
         </Flex>
       </Flex>
