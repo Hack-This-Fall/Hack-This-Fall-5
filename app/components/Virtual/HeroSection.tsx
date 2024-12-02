@@ -144,7 +144,7 @@ const HeroSection = () => {
           </Button>
           <Button
             as={Link}
-            href="https://hackthisfall-virtual.devfolio.co/"
+            href="https://bit.ly/htf-pre"
             target="_blank"
             color="#fff"
             fontFamily="var(--font-roboto-condensed)"
@@ -163,7 +163,7 @@ const HeroSection = () => {
               transform: 'translate(1.95px, 1.95px)',
             }}
           >
-            Apply Now <ArrowForwardIcon ml="0.5rem" />
+            Pre-register <ArrowForwardIcon ml="0.5rem" />
           </Button>
         </Flex>
       </Flex>
