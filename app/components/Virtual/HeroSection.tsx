@@ -190,7 +190,7 @@ const HeroSection = () => {
           </Button>
           <Button
             as={Link}
-            href="https://bit.ly/htf-pre"
+            href="https://hackthisfall.devfolio.co"
             target="_blank"
             color="#fff"
             fontFamily="var(--font-roboto-flex)"
