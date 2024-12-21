@@ -18,6 +18,7 @@ const HeroSection = () => {
     <Flex
       background="#F9F5F2"
       w="full"
+      h="100dvh"
       className="container-1200"
       justifyContent="center"
       alignItems="center"
@@ -25,16 +26,11 @@ const HeroSection = () => {
     >
       {!isMobile ? (
         <>
-          <Flex
-            w="full"
-            alignItems="center"
-            justifyContent="space-between"
-            mb="2rem"
-          >
+          <Flex w="full" justifyContent="space-between" mb="2rem">
             <Heading
               color="#282826"
-              fontFamily="var(--font-roboto-condensed)"
-              fontSize={{ md: '6rem', lg: '7rem', xl: '8rem', '2xl': '10rem' }}
+              fontFamily="var(--font-roboto-flex)"
+              fontSize={{ md: '5rem', lg: '6rem', xl: '7rem', '2xl': '9rem' }}
               fontWeight="600"
             >
               INNOVATE
@@ -50,12 +46,7 @@ const HeroSection = () => {
               alt="Pill"
             />
           </Flex>
-          <Flex
-            w="full"
-            alignItems="center"
-            justifyContent="space-between"
-            mb="5rem"
-          >
+          <Flex w="full" justifyContent="space-between" mb="5rem">
             <Image
               h={{ md: '5rem', lg: '6rem', xl: '7rem', '2xl': '9rem' }}
               src="/images/icons/yellowPill.svg"
@@ -68,8 +59,8 @@ const HeroSection = () => {
             />
             <Heading
               color="#282826"
-              fontFamily="var(--font-roboto-condensed)"
-              fontSize={{ md: '6rem', lg: '7rem', xl: '8rem', '2xl': '10rem' }}
+              fontFamily="var(--font-roboto-flex)"
+              fontSize={{ md: '5rem', lg: '6rem', xl: '7rem', '2xl': '9rem' }}
               fontWeight="600"
             >
               FOR GOOD
@@ -78,6 +69,65 @@ const HeroSection = () => {
         </>
       ) : (
         <>
+          {/* <Heading
+            color="#282826"
+            fontFamily="var(--font-roboto-flex)"
+            fontSize={{ base: '3rem', sm: '3.5rem' }}
+            fontWeight="900"
+            mb="0.5rem"
+          >
+            INNOVATE
+          </Heading>
+          <Flex
+            alignItems="center"
+            w="95%"
+            justifyContent="space-between"
+            mb="0.5rem"
+          >
+            <Heading
+              color="#282826"
+              fontFamily="var(--font-roboto-flex)"
+              fontSize={{ base: '3rem', sm: '3.5rem' }}
+              fontWeight="900"
+            >
+              FOR
+            </Heading>
+            <Image
+              h={{ base: '3rem', sm: '3.5rem' }}
+              src="/images/icons/skinArrows.svg"
+              alt="Star"
+            />
+            <Image
+              h={{ base: '3rem', sm: '3.5rem' }}
+              src="/images/icons/pill.svg"
+              alt="Pill"
+            />
+          </Flex>
+          <Flex
+            alignItems="center"
+            w="full"
+            justifyContent="space-between"
+            mb={{ base: '2rem', md: '5rem' }}
+          >
+            <Image
+              h={{ base: '3rem', sm: '3.5rem' }}
+              src="/images/icons/yellowPill.svg"
+              alt="Yellow Pill"
+            />
+            <Image
+              h={{ base: '3rem', sm: '3.5rem' }}
+              src="/images/icons/greenStar.svg"
+              alt="Arrows"
+            />
+            <Heading
+              color="#282826"
+              fontFamily="var(--font-roboto-flex)"
+              fontSize={{ base: '3rem', sm: '3.5rem' }}
+              fontWeight="900"
+            >
+              GOOD
+            </Heading>
+          </Flex> */}
           <Image src="/images/Hero.svg" alt="Hero" w="90%" mb="2rem" />
         </>
       )}
@@ -90,20 +140,7 @@ const HeroSection = () => {
         {isMobile ? (
           <Text
             color="#282826"
-            fontFamily="var(--font-roboto-condensed)"
-            fontSize={{ base: '1.5rem', xl: '2rem' }}
-            textAlign={{ base: 'center', xl: 'left' }}
-            fontWeight="600"
-            fontStyle="italic"
-            mb={{ base: '2rem', xl: '0' }}
-            // mt={{ base: "2rem", xl: "0" }}
-          >
-            VIRTUAL HACKATHON <br /> 8 - 10 NOV 2024
-          </Text>
-        ) : (
-          <Text
-            color="#282826"
-            fontFamily="var(--font-roboto-condensed)"
+            fontFamily="var(--font-roboto-flex)"
             fontSize={{ base: '1.5rem', xl: '2rem' }}
             textAlign={{ base: 'center', xl: 'left' }}
             fontWeight="600"
@@ -111,7 +148,20 @@ const HeroSection = () => {
             mb={{ base: '4rem', xl: '0' }}
             mt={{ base: '2rem', xl: '0' }}
           >
-            VIRTUAL HACKATHON · 8 - 10 NOV 2024
+            IN-PERSON HACKATHON <br /> 21 - 23 MAR 2025
+          </Text>
+        ) : (
+          <Text
+            color="#282826"
+            fontFamily="var(--font-roboto-flex)"
+            fontSize={{ base: '1.5rem', xl: '2rem' }}
+            textAlign={{ base: 'center', xl: 'left' }}
+            fontWeight="600"
+            fontStyle="italic"
+            mb={{ base: '4rem', xl: '0' }}
+            mt={{ base: '2rem', xl: '0' }}
+          >
+            IN-PERSON HACKATHON <br /> 21 - 23 MAR 2025
           </Text>
         )}
         <Flex
@@ -124,7 +174,7 @@ const HeroSection = () => {
             href="https://discord.hackthisfall.tech"
             target="_blank"
             color="#282826"
-            fontFamily="var(--font-roboto-condensed)"
+            fontFamily="var(--font-roboto-flex)"
             fontSize="1.5rem"
             fontWeight="600"
             bg="transparent"
@@ -134,11 +184,7 @@ const HeroSection = () => {
             borderRadius="full"
             border="2px solid #282826"
             boxShadow="2.95px 2.95px 0px 0px #000000"
-            _hover={{
-              bg: 'transparent',
-              boxShadow: '1px 1px 0px 0px #282826',
-              transform: 'translate(1.95px, 1.95px)',
-            }}
+            _hover={{ bg: 'transparent', boxShadow: 'none' }}
           >
             Join Discord
           </Button>
@@ -147,7 +193,7 @@ const HeroSection = () => {
             href="https://bit.ly/htf-pre"
             target="_blank"
             color="#fff"
-            fontFamily="var(--font-roboto-condensed)"
+            fontFamily="var(--font-roboto-flex)"
             fontSize="1.5rem"
             fontWeight="600"
             bg="#746BEB"
@@ -157,13 +203,9 @@ const HeroSection = () => {
             borderRadius="full"
             border="2px solid #282826"
             boxShadow="2.95px 2.95px 0px 0px #000000"
-            _hover={{
-              bg: '#746BEB',
-              boxShadow: '1px 1px 0px 0px #282826',
-              transform: 'translate(1.95px, 1.95px)',
-            }}
+            _hover={{ bg: '#746BEB', boxShadow: 'none' }}
           >
-            Pre Register <ArrowForwardIcon ml="0.5rem" />
+            Register Now <ArrowForwardIcon ml="0.5rem" />
           </Button>
         </Flex>
       </Flex>
