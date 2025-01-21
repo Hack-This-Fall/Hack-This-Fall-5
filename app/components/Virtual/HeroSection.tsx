@@ -141,27 +141,27 @@ const HeroSection = () => {
           <Text
             color="#282826"
             fontFamily="var(--font-roboto-flex)"
-            fontSize={{ base: '1.5rem', xl: '2rem' }}
+            fontSize={{ base: '1.5rem', xl: '1.7rem' }}
             textAlign={{ base: 'center', xl: 'left' }}
-            fontWeight="600"
+            fontWeight="700"
             fontStyle="italic"
             mb={{ base: '4rem', xl: '0' }}
             mt={{ base: '2rem', xl: '0' }}
           >
-            2025 VIRTUAL HACKATHON <br /> COMING SOON
+            2025 VIRTUAL HACKATHON · COMING SOON
           </Text>
         ) : (
           <Text
             color="#282826"
             fontFamily="var(--font-roboto-flex)"
-            fontSize={{ base: '1.5rem', xl: '2rem' }}
+            fontSize={{ base: '1.5rem', xl: '1.7rem' }}
             textAlign={{ base: 'center', xl: 'left' }}
-            fontWeight="600"
+            fontWeight="700"
             fontStyle="italic"
             mb={{ base: '4rem', xl: '0' }}
             mt={{ base: '2rem', xl: '0' }}
           >
-            2025 VIRTUAL HACKATHON <br /> COMING SOON
+            2025 VIRTUAL HACKATHON · COMING SOON
           </Text>
         )}
         <Flex
