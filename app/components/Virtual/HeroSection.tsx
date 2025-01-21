@@ -148,7 +148,7 @@ const HeroSection = () => {
             mb={{ base: '4rem', xl: '0' }}
             mt={{ base: '2rem', xl: '0' }}
           >
-            IN-PERSON HACKATHON <br /> 21 - 23 MAR 2025
+            2025 VIRTUAL HACKATHON <br /> COMING SOON
           </Text>
         ) : (
           <Text
@@ -161,7 +161,7 @@ const HeroSection = () => {
             mb={{ base: '4rem', xl: '0' }}
             mt={{ base: '2rem', xl: '0' }}
           >
-            IN-PERSON HACKATHON <br /> 21 - 23 MAR 2025
+            2025 VIRTUAL HACKATHON <br /> COMING SOON
           </Text>
         )}
         <Flex
@@ -190,7 +190,7 @@ const HeroSection = () => {
           </Button>
           <Button
             as={Link}
-            href="https://hackthisfall.devfolio.co"
+            href="https://lu.ma/4vnnfkxp"
             target="_blank"
             color="#fff"
             fontFamily="var(--font-roboto-flex)"
@@ -205,7 +205,7 @@ const HeroSection = () => {
             boxShadow="2.95px 2.95px 0px 0px #000000"
             _hover={{ bg: '#746BEB', boxShadow: 'none' }}
           >
-            Register Now <ArrowForwardIcon ml="0.5rem" />
+            Pre-Register Now <ArrowForwardIcon ml="0.5rem" />
           </Button>
         </Flex>
       </Flex>
