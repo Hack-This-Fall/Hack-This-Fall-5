@@ -1,6 +1,9 @@
 'use client';
 
 import { Flex, Image, Link, useBreakpointValue } from '@chakra-ui/react';
+import Lottie from 'lottie-react';
+import animationDesktop from './animationDesktop.json';
+import animationMobile from './animationMobile.json';
 
 const HeroSection = () => {
   const isMobile = useBreakpointValue({ base: true, md: false });
@@ -16,7 +19,14 @@ const HeroSection = () => {
     >
       {!isMobile ? (
         <>
-          <Image src={'/images/hero/base.svg'} alt="Hero" w="full" />
+          <Lottie
+            animationData={animationDesktop}
+            loop={false}
+            style={{
+              width: '100%',
+              height: '100%',
+            }}
+          />
           <Image
             position="absolute"
             src="/images/hero/heading.svg"
@@ -26,24 +36,42 @@ const HeroSection = () => {
           />
           <Link
             pos="absolute"
+            bgColor="#F9F5F2"
             bottom="5%"
-            right="8%"
-            w={{ md: '150px', lg: '200px', '2xl': '275px' }}
+            right="9.5%"
+            w={{ md: '160px', lg: '210px', '2xl': '290px' }}
             aspectRatio="1"
             borderRadius="full"
             href="https://hackthisfall.devfolio.co/"
             target="_blank"
-          />
+          >
+            <Image
+              h="100%"
+              aspectRatio="1"
+              borderRadius="full"
+              src="/images/hero/primaryButton.svg"
+              alt="Devfolio"
+            />
+          </Link>
           <Link
             pos="absolute"
+            bgColor="#F9F5F2"
             bottom="41%"
-            right="8%"
-            w={{ md: '70px', lg: '90px', '2xl': '120px' }}
+            right="9.5%"
+            w={{ md: '80px', lg: '100px', '2xl': '130px' }}
             aspectRatio="1"
             borderRadius="full"
             href="https://discord.hackthisfall.tech/"
             target="_blank"
-          />
+          >
+            <Image
+              h="100%"
+              aspectRatio="1"
+              borderRadius="full"
+              src="/images/hero/discordButton.svg"
+              alt="Devfolio"
+            />
+          </Link>
         </>
       ) : (
         <>
