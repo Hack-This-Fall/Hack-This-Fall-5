@@ -18,7 +18,6 @@ const HeroSection = () => {
     <Flex
       background="#F9F5F2"
       w="full"
-      h="100dvh"
       className="container-1200"
       justifyContent="center"
       alignItems="center"
